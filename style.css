@@ -1,0 +1,136 @@
+* {
+     font-family: "Proxima Nova";
+     box-sizing: border-box;
+     margin: 0;
+}
+
+.home-section {
+     height: 100vh;
+     position: relative;
+     overflow: hidden;
+     background-color: #F9F9F9;
+}
+
+.header-section {
+     display: flex;
+     justify-content: left;
+     align-items: center;
+     margin-left: 50px;
+     margin-top: 20px;
+     position: relative;
+     z-index: 2;
+}
+
+.title {
+     color: #D32F2F;
+     font-size: 30px;
+     font-style: normal;
+     font-weight: 700;
+     line-height: normal;
+     letter-spacing: -2px;
+     margin-right: 50px;
+}
+
+.navigation-section {
+     display: flex;
+     width: 545px;
+}
+
+.navigation-section a {
+     color: #FF4D4D;
+     font-size: 14px;
+     font-style: normal;
+     font-weight: 700;
+     line-height: normal;
+     text-decoration: none;
+     margin-right: 35px;
+}
+
+a:hover {
+     text-decoration: underline;
+}
+
+.home-figure {
+     position: relative;
+     height: calc(100vh - 80px);
+     margin-top: -80px;
+}
+
+@keyframes slide {
+     from {
+          transform: translateX(0);
+     }    
+     to {
+          transform: translateX(-90%);
+     }
+}
+
+.big-word {
+     font-size: 600px;
+     font-style: normal;
+     font-weight: 900;
+     line-height: 1;
+     letter-spacing: -40px;
+     background: linear-gradient(180deg, #D32F2F 35%, #FF4D4D 60.0%, rgba(255, 77, 77, 0.21) 90%);
+     background-clip: text;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+
+.carousel-container {
+     overflow: hidden;
+     white-space: nowrap;
+     width: 100%;
+     margin-top: 70px;
+}
+
+.letter-carousel {
+     display: inline-flex;
+     animation: slide 70s linear infinite;
+}
+
+.home-figure img {
+     width: 750px;
+     height: 620px;
+     position: relative;
+     left: 50%;
+     transform: translate(-50%, -100%);
+}
+
+.message {
+     font-family: Helvetica;
+     position: absolute;
+     left: 52%;
+     bottom: 0;
+     transform: translate(-50%, 0); 
+     color: #D32F2F;
+     width: 100vw;
+     font-size: 16px;
+     text-align: center;
+     font-style: normal;
+     font-weight: 900;
+     line-height: normal;
+     letter-spacing: 45px;
+}
+
+.hiv-info-section {
+     height: 100vh;
+     background-image: url("Resources/Background/bgTrivia.jpg");
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+
+.hiv-info-container {
+     width: 600px;
+}
+
+.hiv-info-section p {
+     font-family: Helvetica;
+     text-align: justify;
+     color: #f2f2f2;
+}
+
+.education-section {
+     height: 100vh;
+     background-color: purple;
+}
