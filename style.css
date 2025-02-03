@@ -4,14 +4,14 @@
      margin: 0;
 }
 
-.home-section {
+.hero {
      height: 100vh;
      position: relative;
      overflow: hidden;
      background-color: #F9F9F9;
 }
 
-.header-section {
+.header {
      display: flex;
      justify-content: left;
      align-items: center;
@@ -21,7 +21,7 @@
      z-index: 2;
 }
 
-.title {
+.logo {
      color: #D32F2F;
      font-size: 30px;
      font-style: normal;
@@ -31,12 +31,12 @@
      margin-right: 50px;
 }
 
-.navigation-section {
+.nav {
      display: flex;
      width: 545px;
 }
 
-.navigation-section a {
+.nav a {
      color: #FF4D4D;
      font-size: 14px;
      font-style: normal;
@@ -50,7 +50,7 @@ a:hover {
      text-decoration: underline;
 }
 
-.home-figure {
+.hero-figure {
      position: relative;
      height: calc(100vh - 80px);
      margin-top: -80px;
@@ -65,7 +65,7 @@ a:hover {
      }
 }
 
-.big-word {
+.carousel-text {
      font-size: 600px;
      font-style: normal;
      font-weight: 900;
@@ -84,12 +84,12 @@ a:hover {
      margin-top: 70px;
 }
 
-.letter-carousel {
+.text-carousel {
      display: inline-flex;
      animation: slide 70s linear infinite;
 }
 
-.home-figure img {
+.hero-figure img {
      width: 750px;
      height: 620px;
      position: relative;
@@ -97,7 +97,7 @@ a:hover {
      transform: translate(-50%, -100%);
 }
 
-.message {
+.hero-message {
      font-family: Helvetica;
      position: absolute;
      left: 52%;
@@ -113,24 +113,24 @@ a:hover {
      letter-spacing: 45px;
 }
 
-.hiv-info-section {
+.hiv-info {
      height: 100vh;
      background-image: url("Resources/Background/bgTrivia.jpg");
      background-size: cover;
      background-repeat: no-repeat;
 }
 
-.hiv-info-container {
+.hiv-info-text {
      width: 600px;
 }
 
-.hiv-info-section p {
+.hiv-info p {
      font-family: Helvetica;
      text-align: justify;
      color: #f2f2f2;
 }
 
-.education-section {
+.education {
      height: 100vh;
      background-color: purple;
 }
