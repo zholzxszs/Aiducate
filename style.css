@@ -157,7 +157,7 @@ a:hover {
      font-size: 18px;
      font-weight: bold;
      border-radius: 5px;
-     /* transition: background 0.2s ease-in-out; */
+     transition: background 0.2s ease-in-out;
      align-self: flex-start;
 }
 
@@ -172,9 +172,21 @@ a:hover {
      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.education {
-     height: 100vh;
-     background-color: purple;
+.hiv-info-images img:hover {
+     transform: scale(1.05);
 }
 
+.education {
+     height: 100vh;
+     background-color: #F9F9F9;
+}
+
+
+footer {
+     text-align: center;
+     font-family: Helvetica;
+     color: #D32F2F;
+     font-weight: 900;
+     font-size: 24px;
+}
 
