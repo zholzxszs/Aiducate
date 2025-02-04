@@ -176,17 +176,14 @@ a:hover {
      transform: scale(1.05);
 }
 
-.education {
+.blog-section {
      height: 100vh;
      background-color: #F9F9F9;
 }
 
 
-footer {
-     text-align: center;
-     font-family: Helvetica;
-     color: #D32F2F;
-     font-weight: 900;
-     font-size: 24px;
+.footer-section {
+     height: 50vh;
+     background-color: #FF4D4D;
 }
 
