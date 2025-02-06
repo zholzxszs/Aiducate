@@ -21,6 +21,17 @@
      z-index: 2;
 }
 
+.logo-and-name {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.logo-and-name img {
+     width: 50px;
+     height: 50px;
+}
+
 .logo {
      color: #D32F2F;
      font-size: 30px;
@@ -186,4 +197,56 @@ a:hover {
      height: 50vh;
      background-color: #FF4D4D;
 }
+
+.blog-section {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 50px;
+     padding: 40px;
+}
+
+.blog-section > div > h2 {
+     font-size: 50px;
+     color: #D32F2F;
+}
+
+.container-blogpost {
+     display: flex;
+     gap: 50px;
+     justify-content: center;
+     /* align-items: center; */
+}
+
+.container-blogpost > div > p {
+     text-align: justify;
+     font-family: Helvetica;
+     color: #FF4D4D;
+}
+
+.blogpost:hover  {
+     background-color: #D32F2F;
+     cursor: pointer;
+     transform: scale(1.05);
+     color: white;
+}
+
+.blogpost:hover p {
+     color: #f2f2f2;
+} 
+
+.blogpost h3 {
+     font-size: 24px;
+}
+
+.blogpost {
+     border: 2px #D32F2F solid;
+     padding: 20px;
+     border-radius: 30px;
+     width: 250px;
+     height: 450px;
+     overflow: hidden;
+}
+
 
