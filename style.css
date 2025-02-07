@@ -6,6 +6,7 @@
 
 p {
      font-family: Helvetica;
+     text-align: justify;
 }
 
 .hero {
@@ -243,7 +244,6 @@ a:hover {
      height: 100%;
      width: 80%;
      background-color: magenta;
-     text-align: justify;
 }
 
 .trending h3 {
@@ -256,6 +256,18 @@ a:hover {
      background-color: green;
 }
 
+.hiv-basics {
+     background-color: #E6E6E6;
+     height: 40px;
+}
+
+.HIV h4 {
+     font-size: 18px;
+}
+
+.HIV p {
+     font-size: 16px;
+}
 
 
 /* FOOTER SECTION */
@@ -285,7 +297,6 @@ a:hover {
 }
 
 .footer-tagline p {
-     text-align: justify;
      display: flex;
      font-weight: 400;
      font-style: normal;
