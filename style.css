@@ -210,6 +210,24 @@ a:hover {
      background-color: #1B3A4B;
      color: #FFFFFF;
      height: 50vh;
+     /* display: flex;
+     flex-direction: column; */
+}
+
+.footer-first-row {
+     display: flex;
+}
+
+.footer-logo {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.footer-links {
+     display: flex;
+     justify-content: center;
+     align-items: center;
 }
 
 .footer-logo img {
