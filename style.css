@@ -2,6 +2,12 @@
      font-family: "Proxima Nova";
      box-sizing: border-box;
      margin: 0;
+     scrollbar-width: none; /* Firefox */
+     -ms-overflow-style: none; /* IE and Edge */
+}
+
+*::-webkit-scrollbar {
+     display: none; /* Chrome, Safari, Opera */
 }
 
 p {
@@ -178,7 +184,7 @@ a:hover {
      flex-direction: column;
      justify-content: center;
      gap: 12px;
-     width: 325px;
+     width: 350px;
      height: 300px;
      max-width: 100%;
      position: relative;
