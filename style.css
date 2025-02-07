@@ -8,7 +8,8 @@
      height: 100vh;
      position: relative;
      overflow: hidden;
-     background-color: #F9F9F9;
+     background: linear-gradient(180deg, #F8F9FA 0%, #D3D3D3 100%);
+
 }
 
 .header {
@@ -25,16 +26,17 @@
      display: flex;
      align-items: center;
      justify-content: center;
+     gap: 0px;
 }
 
 .logo-and-name img {
-     width: 50px;
-     height: 50px;
+     width: 40px;
+     height: 40px;
 }
 
 .logo {
      color: #D32F2F;
-     font-size: 30px;
+     font-size: 25px;
      font-style: normal;
      font-weight: 700;
      line-height: normal;
@@ -45,10 +47,13 @@
 .nav {
      display: flex;
      width: 545px;
+     justify-content: space-between;
+     width: 100%;
+     align-items: center;
 }
 
-.nav a {
-     color: #FF4D4D;
+.nav a, .nav h3 {
+     color: #1B3A4B;
      font-size: 14px;
      font-style: normal;
      font-weight: 700;
@@ -125,7 +130,7 @@ a:hover {
      filter: blur(1px);
 }
 
-.hiv-info {
+/* .hiv-info {
      height: 100vh;
      background-image: url("Resources/Background/bgTrivia.jpg");
      background-size: cover;
@@ -217,7 +222,7 @@ a:hover {
      gap: 50px;
      justify-content: center;
      /* align-items: center; */
-}
+/* }
 
 .container-blogpost > div > p {
      text-align: justify;
@@ -247,6 +252,36 @@ a:hover {
      width: 250px;
      height: 450px;
      overflow: hidden;
+     background-image: url("Resources/Background/imgHome_2.svg");
+} */ 
+
+.message-container  {
+     height: 100vh;
+     width: 100vw;
+     display: flex;
+     align-items: center;
+     justify-content: center;
 }
 
+.image-container > img {
+     height: 400px;
+     width: 600px;
+}
 
+.text-container {
+     width: 300px;
+     height: 275px;
+     background-color: #1B3A4B;
+     border: solid red 8px;
+     padding: 10px;
+}
+
+.text-container {
+     font-weight: 700;
+     font-family: Helvetica;
+}
+
+.text-container h2 {
+     font-size: 24px;
+     color: ;
+}
