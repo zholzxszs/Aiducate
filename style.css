@@ -8,7 +8,7 @@
      height: 100vh;
      position: relative;
      overflow: hidden;
-     background: linear-gradient(180deg, #F8F9FA 0%, #D3D3D3 100%);
+     background: linear-gradient(180deg, #F8F9FA 60%, #D3D3D3 100%);
 
 }
 
@@ -130,32 +130,89 @@ a:hover {
      filter: blur(1px);
 }
 
+/* MESSAGE SECTION */
 .message-container  {
      height: 100vh;
-     width: 100vw;
+     width: 100%;
+     display: inline-flex;
+     flex: 0;
+}
+
+.image-container {
+     width: 55%;
+     background-color: #F8F9FA;
+}
+
+.text-container {
+     width: 45%;
+     background-color: #E6E6E6;
+}
+
+.capsule-image {
+     height: 450px;
+     width: 675px;
+     position: relative;
+     transform: translate(30%, 22%);
+     border: solid 8px #FFFFFF;
+}
+
+.slanting-lines {
+     width: 680px;
+     position: relative;
+     height: 170px;
+     transform: translate(7%, 3%);
+}
+
+.text-square {
      display: flex;
-     align-items: center;
+     flex-direction: column;
      justify-content: center;
-}
-
-.image-container > img {
-     height: 400px;
-     width: 600px;
-}
-
-.text-container {
-     width: 300px;
-     height: 275px;
-     background-color: #1B3A4B;
-     border: solid red 8px;
-     padding: 10px;
-}
-
-.text-container {
-     font-weight: 700;
+     gap: 12px;
+     width: 325px;
+     height: 300px;
+     max-width: 100%;
      font-family: Helvetica;
+     position: relative;
+     top: 50%;
+     left: 50%;
+     padding: 10px;
+     background-color: #1B3A4B;
+     border: #FFFFFF 7px solid;
+     transform: translate(-75%, -50%); /* Centers exactly */
 }
 
-.text-container h2 {
-     font-size: 24px;
+.text-square h2 {
+     font-size: 44px;
+     font-weight: 700;
+}
+
+.text-square p {
+     font-size: 12px;
+     color: #FFFFFF;
+     font-style: italic;
+     font-weight: 25;
+}
+
+.text-white {
+     color: #E6E6E6;
+}
+
+.text-whiter {
+     color: #FFFFFF;
+}
+
+.message-section {
+     height: 100vh;
+     background-color: red;
+}
+
+.footer-section {
+     background-color: #1B3A4B;
+     color: #FFFFFF;
+     height: 50vh;
+}
+
+.footer-logo img {
+     width: 20px;
+     height: 20px;
 }
