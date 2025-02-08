@@ -13,6 +13,10 @@ p {
      text-align: justify;
 }
 
+a {
+     text-decoration: none;
+}
+
 .hero {
      height: 100vh;
      position: relative;
@@ -29,13 +33,13 @@ p {
      margin-top: 20px;
      position: relative;
      z-index: 2;
+     gap: 30px;
 }
 
 .logo-and-name {
      display: flex;
      align-items: center;
      justify-content: center;
-     gap: 0px;
 }
 
 .logo-and-name img {
@@ -253,12 +257,14 @@ a:hover {
 
 .trending-image {
      width: 60%;
+     object-fit: contain;
 }
 
 .trending-image img {
      width: 100%;
      height: 100%;
      object-fit: cover;
+     object-position: center 60%; 
 }
 
 .trending-text {
@@ -337,13 +343,15 @@ hr {
 }
 
 .btn-basics {
-     margin-top: 30px;
-     width: 130px;
+     margin-top: 35px;
+     width: 150px;
      height: 30px;
      font-size: 16px;
      font-weight: 700;
      text-align: center;
      cursor: pointer;
+     color: #F8F9FA;
+     background-color: #1B3A4B;
 }
 
 .button-container {
@@ -452,7 +460,7 @@ hr {
 
 /* BLOGPOST SECTION */
 .blogpost-section {
-     height: 100vh;
+     height: auto;
      padding: 30px;
      background-color: #F8F9FA;
 }
@@ -474,9 +482,77 @@ hr {
 }
 
 .blogpost {
-     height: 475px;
-     width: 375px;
+     height: 500px;
+     width: 400px;
      background-color: #1B3A4B;
-     padding: 20px;
+     margin-top: 20px;
      border-radius: 6px;
+     overflow: hidden;
+}
+
+.blogpost img {
+     width: 100%;
+     height: 300px;
+     object-fit: cover;
+}
+
+.blog-content {
+     padding: 15px 20px;
+     height: 120px;
+     width: 100%;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     margin: 0;
+     color: #F8F9FA; 
+     line-height: 1.5;
+     font-size: 14px;
+     display: -webkit-box;
+     /* -webkit-line-clamp: 3;
+     -webkit-box-orient: vertical; */
+     /* line-clamp: 3; */
+     margin-bottom: 20px; 
+}
+
+.date, .source {
+     color: #F8F9FA;
+     font-weight: normal;
+     padding: 0 20px;
+     margin: 5px 0; 
+     font-size: 13px; 
+}
+
+.blogpost.one, .blogpost.two, .blogpost.three {
+     cursor: pointer;
+}
+
+.blogpost a {
+     text-decoration: none;
+     color: #F8F9FA;
+}
+
+/* .blogpost a:hover {
+     text-decoration: none;
+     color: #F8F9FA;
+} */
+
+.button-container-blog {
+     display: flex;
+     justify-content: center;
+     gap: 10px;
+     margin-top: 10px;
+}
+
+.button-blog {
+     border-radius: 100%;
+     border: none;
+     width: 15px;
+     height: 15px;
+     background-image: url("Resources/Icons/rbNotClick.png");
+     background-size: cover;
+}
+
+.button-blog:hover {
+     cursor: pointer;
+     background-image: url("Resources/Icons/rbClicked.png");
+
 }
