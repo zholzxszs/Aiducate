@@ -1,0 +1,14 @@
+* {
+     font-family: "Proxima Nova";
+     box-sizing: border-box;
+     margin: 0;
+}
+
+p {
+     font-family: Helvetica;
+     text-align: justify;
+}
+
+body {
+     background-color: #F8F9FA;
+}
