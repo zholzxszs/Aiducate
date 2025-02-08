@@ -2,12 +2,10 @@
      font-family: "Proxima Nova";
      box-sizing: border-box;
      margin: 0;
-     scrollbar-width: none; /* Firefox */
-     -ms-overflow-style: none; /* IE and Edge */
 }
 
 *::-webkit-scrollbar {
-     display: none; /* Chrome, Safari, Opera */
+     /* display: none; */
 }
 
 p {
@@ -183,7 +181,7 @@ a:hover {
      display: flex;
      flex-direction: column;
      justify-content: center;
-     gap: 12px;
+     gap: 5px;
      width: 350px;
      height: 300px;
      max-width: 100%;
@@ -217,24 +215,18 @@ a:hover {
      color: #FFFFFF;
 }
 
-.message-section {
-     height: 100vh;
-     background-color: red;
-}
-
-
 /* BLOGPOST SECTION */
-.blogpost-section {
-     height: 100vh;
-     background: #1B3A4B;
-     padding: 30px;
+.info-section {
+     height: 125vh;
+     background: #F8F9FA;
+     padding: 50px 40px 50px 40px;
      display: flex;
      gap: 20px;
      align-items: stretch;
      position: relative;
 }
 
-.trending-blogpost {
+.overview-info {
      width: 75%;
      display: flex;
      flex-direction: column;
@@ -248,13 +240,9 @@ a:hover {
      gap: 5px;
      background-color: #F8F9FA;
      overflow: hidden;
-     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 5px rgba(0, 0, 0, 0.08);
      border-radius: 8px;
      transition: box-shadow 0.3s ease;
-}
-
-.trending:hover {
-     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
 }
 
 .trending h3 {
@@ -288,7 +276,7 @@ a:hover {
 
 .trending:hover {
      transform: scale(1.02);
-     box-shadow: 0 12px 16px rgba(255, 255, 255, 0.2), 0 6px 8px rgba(255, 255, 255, 0.15);
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 5px rgba(0, 0, 0, 0.08);
      z-index: 10;
      transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -348,11 +336,6 @@ hr {
      background-color: rgba(0, 0, 0, 0.05);
 }
 
-.current-blogpost {
-     height: 150vh;
-     background-color: aquamarine;
-}
-
 .btn-basics {
      margin-top: 30px;
      width: 130px;
@@ -383,7 +366,7 @@ hr {
 .footer-logo-description {
      display: flex;
      flex-direction: column;
-     width: 40%;
+     width: 25%;
      gap: 20px;
      justify-content: center;
      height: 200px;
@@ -394,6 +377,7 @@ hr {
      display: flex;
      align-items: center;
      height: 50vh;
+     gap: 120px;
 }
 
 .footer-tagline p {
@@ -423,8 +407,8 @@ hr {
 .footer-links {
      display: flex;
      justify-content: left;
-     gap: 80px;
-     width: 60%;
+     gap: 120px;
+     width: 75%;
      font-size: 14px;
      font-weight: 400;
      color: #F8F9FA;
@@ -463,4 +447,36 @@ hr {
      font-weight: 400;
      font-style: normal;
      color: #f8f9fae5;
+}
+
+
+/* BLOGPOST SECTION */
+.blogpost-section {
+     height: 100vh;
+     padding: 30px;
+     background-color: #F8F9FA;
+}
+
+.blogpost-header h1 {
+     font-size: 40px;
+     font-weight: 700;
+     color: #1B3A4B;
+     margin-bottom: 20px;
+}
+
+.blogpost-container {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 30px;
+     width: 100%;
+     align-items: center;
+     justify-content: center;
+}
+
+.blogpost {
+     height: 475px;
+     width: 375px;
+     background-color: #1B3A4B;
+     padding: 20px;
+     border-radius: 6px;
 }
