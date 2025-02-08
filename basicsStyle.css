@@ -2,13 +2,208 @@
      font-family: "Proxima Nova";
      box-sizing: border-box;
      margin: 0;
+     padding: 0;
 }
 
-p {
+p, li {
      font-family: Helvetica;
      text-align: justify;
+     font-size: 16px;
+     text-shadow: none;
+}
+
+ul li {
+     line-height: 1.8;
+}
+
+a {
+     text-decoration: none;
+     font-weight: bold;
+     color: #1B3A4B;
 }
 
 body {
      background-color: #F8F9FA;
 }
+
+/* Main Banner */
+.main-banner {
+     background-color: #1B3A4B;
+     padding: 3rem 2rem;
+     height: 65vh;
+     display: flex;
+     text-align: justify;
+     justify-content: center;
+     align-items: center;
+     justify-items: center;
+}
+
+.banner-content {
+     margin-top: 80px;
+     display: flex;
+     gap: 40px;
+     justify-content: center;
+     align-items: center;
+     width: 80%;
+}
+
+.banner-text {
+     display: flex;
+     flex-direction: column;
+}
+
+.banner-content h1 {
+     font-size: 38px;
+     color: #FFFFFF;
+     margin-bottom: 1rem;
+}
+
+.banner-content img {
+     width: 500px;
+     height: 240px;
+     border-radius: 10px;
+}
+
+.banner-content p {
+     width: auto;
+     color: #F8F9FA;
+     line-height: 1.5;
+}
+
+/* HIV Basics Section */
+.hiv-basics {
+     display: grid;
+     grid-template-columns: 250px 1fr;
+     gap: 2rem;
+     padding: 2rem;
+}
+
+/* Sidebar Styles */
+.sidebar {
+     background-color: #f5f5f5;
+     padding: 1.5rem;
+     border-radius: 10px;
+     height: fit-content;
+     position: sticky;
+     top: 100px;
+}
+
+.content-topics ul {
+     list-style: none;
+}
+
+.bullet {
+     font-size: 14px;
+}
+
+.has-decoration ul {
+     list-style: circle;
+}
+
+.has-decoration-shallow ul {
+     list-style: disc;
+}
+
+.content-topics h2 {
+     color: #e41e26;
+     margin-bottom: 1rem;
+     font-size: 1.2rem;
+}
+
+.content-topics li {
+     margin: 1rem 0;
+}
+
+.content-topics a {
+     text-decoration: none;
+     color: #1B3A4B;
+     font-weight: 500;
+     transition: color 0.3s ease;
+}
+
+.content-topics a:hover {
+     color: #e41e26;
+}
+
+/* Main Content Styles */
+.main-content {
+     padding: 1rem;
+}
+
+.main-content section {
+     margin-bottom: 3rem;
+}
+
+.main-content h2 {
+     color: #e41e26;
+     margin-bottom: 1.5rem;
+     font-size: 1.8rem;
+}
+
+.content-box {
+     font-family: Helvetica;
+     background-color: #fff;
+     padding: 2rem;
+     border-radius: 10px;
+     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.text-content {
+     font-family: Helvetica;
+     text-align: justify;
+     
+}
+
+.content-box h3 {
+     color: #1B3A4B;
+     margin-bottom: 1rem;
+     font-size: 1.4rem;
+     margin-top: 40px;
+}
+
+.content-box p {
+     margin-bottom: 1rem;
+     line-height: 1.8;
+}
+
+.content-box ul {
+     list-style: none;
+     margin-left: 1rem;
+}
+
+.content-box li {
+     margin: 0.5rem 0;
+     padding-left: 1.5rem;
+     position: relative;
+}
+
+.content-box li::before {
+     content: "•";
+     color: #000000;
+     position: absolute;
+     left: 0;
+}
+
+.image-box {
+     margin-top: 2rem;
+     text-align: center;
+}
+
+.image-box img {
+     width: 100%;
+     height: 400px;
+     border-radius: 8px;
+}
+
+/* Animation for Content Loading */
+@keyframes fadeIn {
+     from {
+          opacity: 0;
+          transform: translateY(20px);
+     }
+     to {
+          opacity: 1;
+          transform: translateY(0);
+     }
+}
+
