@@ -17,12 +17,12 @@ a {
      text-decoration: none;
 }
 
+/* ========== HERO SECTION ========== */
 .hero {
      height: 100vh;
      position: relative;
      overflow: hidden;
      background: linear-gradient(180deg, #F8F9FA 50%, #D3D3D3 100%);
-
 }
 
 .header {
@@ -34,94 +34,92 @@ a {
      position: relative;
      z-index: 2;
      gap: 30px;
+     animation: fadeSlideDown 1s ease-in-out; /* Keeps animation */
 }
 
 .logo-and-name {
      display: flex;
      align-items: center;
      justify-content: center;
+     gap: 10px;
 }
 
 .logo-and-name img {
-     width: 40px;
-     height: 40px;
+     width: 45px;
+     height: 45px;
+     transition: transform 0.3s ease-in-out;
+}
+
+.logo-and-name img:hover {
+     transform: scale(1.1) rotate(5deg);
 }
 
 .logo {
      color: #1B3A4B;
      font-size: 25px;
-     font-style: normal;
      font-weight: 700;
-     line-height: normal;
      letter-spacing: -2px;
      margin-right: 50px;
+     transition: color 0.3s ease-in-out;
+}
+
+.logo:hover {
+     color: #D32F2F;
 }
 
 .nav {
      display: flex;
-     width: 545px;
      justify-content: space-between;
      width: 100%;
      align-items: center;
 }
 
-.nav a, .nav h3 {
+.nav a {
      color: #1B3A4B;
      font-size: 16px;
-     font-style: normal;
      font-weight: 700;
-     line-height: normal;
      text-decoration: none;
      margin-right: 60px;
+     position: relative;
+     transition: color 0.3s ease-in-out;
 }
 
-.welcome-greetings > h3 {
+.nav a:hover {
+     color: #D32F2F;
+}
+
+.nav a::after {
+     content: "";
+     position: absolute;
+     width: 0;
+     height: 3px;
+     background: #D32F2F;
+     left: 50%;
+     bottom: -5px;
+     transform: translateX(-50%);
+     transition: width 0.3s ease-in-out;
+}
+
+.nav a:hover::after {
+     width: 100%;
+}
+
+.welcome-greetings h3 {
      color: #1B3A4B;
      font-size: 16px;
-     font-style: normal;
-}
-
-a:hover {
-     text-decoration: underline;
+     font-weight: 700;
+     padding: 8px 15px;
+     border-radius: 8px;
+     margin-right: 30px;
+     background: linear-gradient(135deg, #FF4D4D 0%, #D32F2F 100%);
+     color: white;
+     animation: fadeIn 1.5s ease-in-out;
 }
 
 .hero-figure {
      position: relative;
      height: calc(100vh - 80px);
      margin-top: -80px;
-}
-
-@keyframes slide {
-     from {
-          transform: translateX(0);
-     }    
-     to {
-          transform: translateX(-90%);
-     }
-}
-
-.carousel-text {
-     font-size: 600px;
-     font-style: normal;
-     font-weight: 900;
-     line-height: 1;
-     letter-spacing: -40px;
-     background: linear-gradient(180deg, #D32F2F 35%, #FF4D4D 60.0%, rgba(255, 77, 77, 0.21) 90%);
-     background-clip: text;
-     -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent;
-}
-
-.carousel-container {
-     overflow: hidden;
-     white-space: nowrap;
-     width: 100%;
-     margin-top: 70px;
-}
-
-.text-carousel {
-     display: inline-flex;
-     animation: slide 70s linear infinite;
 }
 
 .hero-figure img {
@@ -148,8 +146,62 @@ a:hover {
      filter: blur(1px);
 }
 
+.carousel-container {
+     overflow: hidden;
+     white-space: nowrap;
+     width: 100%;
+     margin-top: 70px;
+}
+
+.text-carousel {
+     display: inline-flex;
+     animation: slide 70s linear infinite;
+}
+
+.carousel-text {
+     font-size: 600px;
+     font-style: normal;
+     font-weight: 900;
+     line-height: 1;
+     letter-spacing: -40px;
+     background: linear-gradient(180deg, #D32F2F 35%, #FF4D4D 60%, rgba(255, 77, 77, 0.21) 90%);
+     background-clip: text;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+
+@keyframes slide {
+     from {
+          transform: translateX(0);
+     }    
+     to {
+          transform: translateX(-90%);
+     }
+}
+
+@keyframes fadeSlideDown {
+     from {
+          opacity: 0;
+          transform: translateY(-20px);
+     }
+     to {
+          opacity: 1;
+          transform: translateY(0);
+     }
+}
+
+@keyframes fadeIn {
+     from {
+          opacity: 0;
+     }
+     to {
+          opacity: 1;
+     }
+}
+
+
 /* MESSAGE SECTION */
-.message-container  {
+.message-container {
      height: 100vh;
      width: 100%;
      display: inline-flex;
@@ -166,21 +218,48 @@ a:hover {
      background-color: #E6E6E6;
 }
 
+/* Capsule Image Animation */
 .capsule-image {
      height: 450px;
      width: 675px;
      position: relative;
-     transform: translate(30%, 22%);
      border: solid 8px #FFFFFF;
+     transform: translate(30%, 22%);
+     opacity: 0;
+     animation: fadeIn 1.2s ease-out forwards;
 }
 
+@keyframes fadeIn {
+     from {
+          opacity: 0;
+     }
+     to {
+          opacity: 1;
+     }
+}
+
+/* Slanting Lines Animation */
 .slanting-lines {
      width: 680px;
-     position: relative;
      height: 170px;
-     transform: translate(7%, 3%);
+     position: relative;
+     transform: translate(7%, 3%) translateX(-30px);
+     opacity: 0;
+     animation: slideIn 1s ease-out forwards 0.5s;
 }
 
+@keyframes slideIn {
+     from {
+          opacity: 0;
+          transform: translate(7%, 3%) translateX(-30px);
+     }
+     to {
+          opacity: 1;
+          transform: translate(7%, 3%);
+     }
+}
+
+/* Text Square Animation */
 .text-square {
      display: flex;
      flex-direction: column;
@@ -195,7 +274,20 @@ a:hover {
      padding: 30px;
      background-color: #1B3A4B;
      border: #FFFFFF 7px solid;
-     transform: translate(-75%, -50%); /* Centers exactly */
+     transform: translate(-75%, -50%) scale(0.9);
+     opacity: 0;
+     animation: fadeSlideIn 1s ease-out forwards 1s;
+}
+
+@keyframes fadeSlideIn {
+     from {
+          opacity: 0;
+          transform: translate(-75%, -50%) scale(0.9);
+     }
+     to {
+          opacity: 1;
+          transform: translate(-75%, -50%) scale(1);
+     }
 }
 
 .text-square h2 {
@@ -218,6 +310,7 @@ a:hover {
 .text-whiter {
      color: #FFFFFF;
 }
+
 
 /* BLOGPOST SECTION */
 .info-section {
@@ -300,14 +393,14 @@ a:hover {
 }
 
 .hiv-basics {
-     background-color: #D3D3D3;
+     background-color: #1B3A4B;
      padding: 10px;
      text-align: center;
      box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .hiv-basics h3 {
-     color: #1B3A4B;
+     color: #F8F9FA;
      font-weight: 700;
      font-size: 20px;
 }
@@ -506,10 +599,6 @@ hr {
      color: #F8F9FA; 
      line-height: 1.5;
      font-size: 14px;
-     display: -webkit-box;
-     /* -webkit-line-clamp: 3;
-     -webkit-box-orient: vertical; */
-     /* line-clamp: 3; */
      margin-bottom: 20px; 
 }
 
@@ -530,16 +619,11 @@ hr {
      color: #F8F9FA;
 }
 
-/* .blogpost a:hover {
-     text-decoration: none;
-     color: #F8F9FA;
-} */
-
 .button-container-blog {
      display: flex;
      justify-content: center;
      gap: 10px;
-     margin-top: 10px;
+     margin-top: 20px;
 }
 
 .button-blog {
@@ -554,5 +638,94 @@ hr {
 .button-blog:hover {
      cursor: pointer;
      background-image: url("Resources/Icons/rbClicked.png");
-
 }
+
+@keyframes fadeInUp {
+     from {
+          opacity: 0;
+          transform: translateY(50px);
+     }
+     to {
+          opacity: 1;
+          transform: translateY(0);
+     }
+}
+
+@keyframes pulse {
+     0% {
+          transform: scale(1);
+     }
+     50% {
+          transform: scale(1.1);
+     }
+     100% {
+          transform: scale(1);
+     }
+}
+
+@keyframes fadeInUp {
+     from {
+          opacity: 0;
+          transform: translateY(50px);
+     }
+     to {
+          opacity: 1;
+          transform: translateY(0);
+     }
+}
+
+@keyframes pulse {
+     0% {
+          transform: scale(1);
+     }
+     50% {
+          transform: scale(1.1);
+     }
+     100% {
+          transform: scale(1);
+     }
+}
+
+@keyframes shadowPulse {
+     0% {
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+     }
+     50% {
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+     }
+     100% {
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+     }
+}
+
+.blogpost {
+     animation: fadeInUp 0.8s ease-in-out;
+     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.blogpost:hover {
+     transform: scale(1.05);
+     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.blogpost img {
+     transition: transform 0.3s ease-in-out;
+}
+
+.blogpost:hover img {
+     transform: scale(1.1);
+}
+
+.button-blog {
+     animation: pulse 1.5s infinite ease-in-out;
+     transition: transform 0.3s ease-in-out;
+}
+
+.button-blog:hover {
+     transform: scale(1.2);
+}
+
+.blogpost-container:hover {
+     animation: shadowPulse 1.5s infinite ease-in-out;
+}
+
