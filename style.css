@@ -13,7 +13,7 @@ a {
      text-decoration: none;
 }
 
-/* ========== HERO SECTION ========== */
+/* Head Section */
 .hero {
      height: 100vh;
      position: relative;
@@ -31,7 +31,7 @@ a {
      position: relative;
      z-index: 2;
      gap: 30px;
-     animation: fadeSlideDown 1s ease-in-out; /* Keeps animation */
+     animation: fadeSlideDown 1s ease-in-out;
 }
 
 .logo-and-name {
