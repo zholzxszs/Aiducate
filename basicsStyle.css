@@ -12,8 +12,13 @@ p, li {
      text-shadow: none;
 }
 
-ul li {
+ul li, ol li {
      line-height: 1.8;
+}
+
+ol li {
+     counter-increment: list-counter;
+     position: relative;
 }
 
 a {
@@ -180,12 +185,26 @@ body {
      position: relative;
 }
 
-.content-box li::before {
+.content-box ol {
+     margin-left: 1rem;
+     list-style: none;       
+     counter-reset: list-counter 0; 
+}
+
+.content-box ul li::before {
      content: "•";
      color: #000000;
      position: absolute;
      left: 0;
 }
+
+.content-box ol li::before {
+     content: counter(list-counter) ". "; 
+     color: #000000;
+     position: absolute;
+     left: 0;
+}
+
 
 .image-box {
      margin-top: 2rem;
