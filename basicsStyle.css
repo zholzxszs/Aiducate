@@ -92,10 +92,13 @@ body {
 
 .content-topics ul {
      list-style: none;
+     display: flex;
+     gap: 10px;
+     flex-direction: column;
 }
 
 .bullet {
-     font-size: 14px;
+     font-size: 18px;
 }
 
 .content-topics h2 {
@@ -105,7 +108,8 @@ body {
 }
 
 .content-topics li {
-     margin: 1rem 0;
+     font-size: 1.2rem;
+     font-weight: 700;
 }
 
 .content-topics a {
@@ -202,6 +206,10 @@ body {
      color: white;
      border-radius: 20px;
      line-height: 1.8;
+}
+
+.content-box .text-header {
+     margin-top: 0px;
 }
 
 /* Animation for Content Loading */
