@@ -98,14 +98,6 @@ body {
      font-size: 14px;
 }
 
-.has-decoration ul {
-     list-style: circle;
-}
-
-.has-decoration-shallow ul {
-     list-style: disc;
-}
-
 .content-topics h2 {
      color: #e41e26;
      margin-bottom: 1rem;
