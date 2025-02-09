@@ -152,7 +152,6 @@ body {
 .text-content {
      font-family: Helvetica;
      text-align: justify;
-     
 }
 
 .content-box h3 {
@@ -160,6 +159,12 @@ body {
      margin-bottom: 1rem;
      font-size: 1.4rem;
      margin-top: 30px;
+}
+
+.content-box h4 {
+     color: #1B3A4B;
+     font-size: 1.2rem;
+     line-height: 1.8;
 }
 
 .content-box p {
