@@ -113,7 +113,7 @@ p {
      border-radius: 8px;
      background: linear-gradient(135deg, #FF4D4D 0%, #D32F2F 100%);
      color: white;
-     animation: fadeIn 1.5s ease-in-out;
+     animation: fadeSlideDown 0.3s ease-in-out;
 }
 
 @keyframes fadeSlideDown {
