@@ -28,8 +28,33 @@ a {
 }
 
 body {
-     background-color: #F8F9FA;
+     background: linear-gradient(135deg, #FF4D4D 0%, #D32F2F 100%);
 }
 
+/* STORIES SECTION */
+.stories {
+     margin-top: 150px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
 
+.story {
+     width: 500px;
+     height: 700px;
+}
 
+.story-img img {
+     width: 200px;
+     height: 400px;
+}
+
+.story-text h2 {
+     font-size: 50px;
+}
+
+.story {
+     display: flex;
+     gap: 20px;
+}

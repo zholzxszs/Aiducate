@@ -1,0 +1,125 @@
+* {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+     font-family: 'Poppins', sans-serif;
+}
+
+body {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     background: linear-gradient(180deg, #F8F9FA 50%, #D3D3D3 100%);
+}
+
+.container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+} 
+
+.login-box {
+     background: #fff;
+     padding: 30px;
+     border-radius: 15px;
+     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+     text-align: center;
+     width: 380px;
+     animation: fadeIn 0.6s ease-in-out;
+}
+
+h2 {
+     font-weight: 600;
+     font-size: 28px;
+     color: #1B3A4B;
+}
+
+h4 {
+     margin-top: 5px;
+     font-weight: 300;
+     font-size: 14px;
+     color: #1B3A4B;
+     margin-bottom: 30px;
+}
+
+input {
+     width: 100%;
+     padding: 12px;
+     margin: 10px 0;
+     border: 1px solid #ccc;
+     border-radius: 6px;
+     transition: 0.3s;
+}
+
+input:focus {
+     border-color: #764ba2;
+     outline: none;
+     box-shadow: 0px 0px 5px rgba(118, 75, 162, 0.5);
+}
+
+.btn {
+     background: #667eea;
+     color: white;
+     border: none;
+     padding: 12px;
+     width: 100%;
+     border-radius: 6px;
+     cursor: pointer;
+     font-size: 16px;
+     margin-top: 10px;
+     transition: 0.3s;
+     margin-bottom: 20px;
+}
+
+.btn:hover {
+     background: #5563c1;
+}
+
+.google-btn {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background: white;
+     border: 1px solid #ccc;
+     padding: 10px;
+     border-radius: 6px;
+     margin-top: 10px;
+     cursor: pointer;
+     transition: 0.3s;
+}
+
+.google-btn:hover {
+     background: #f3f3f3;
+}
+
+.google-btn img {
+     width: 20px;
+     margin-right: 10px;
+}
+
+p {
+     margin-top: 15px;
+     font-size: 12px;
+}
+
+a {
+     color: #667eea;
+}
+
+a:hover {
+     text-decoration: underline;
+}
+
+@keyframes fadeIn {
+     from { opacity: 0; transform: translateY(-20px); }
+     to { opacity: 1; transform: translateY(0); }
+}
+
+.forgot-pass {
+     display: flex;
+     justify-content: flex-end;
+     font-size: 12px;
+     margin: 10px 0;
+}
