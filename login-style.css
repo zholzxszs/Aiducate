@@ -10,7 +10,7 @@ body {
      justify-content: center;
      align-items: center;
      height: 100vh;
-     background: linear-gradient(180deg, #F8F9FA 50%, #D3D3D3 100%);
+     background: linear-gradient(180deg, #336179 50%, #1B3A4B 100%);
 }
 
 .container {
@@ -21,49 +21,49 @@ body {
 } 
 
 .login-box {
-     background: #fff;
-     padding: 30px;
+     background: #ffffff;
+     padding: 40px;
      border-radius: 15px;
-     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
      text-align: center;
-     width: 380px;
+     width: 400px;
      animation: fadeIn 0.6s ease-in-out;
 }
 
 h2 {
      font-weight: 600;
-     font-size: 28px;
+     font-size: 30px;
      color: #1B3A4B;
 }
 
 h4 {
      margin-top: 5px;
      font-weight: 300;
-     font-size: 14px;
-     color: #1B3A4B;
+     font-size: 16px;
+     color: #004D40;
      margin-bottom: 30px;
 }
 
 input {
      width: 100%;
-     padding: 12px;
+     padding: 14px;
      margin: 10px 0;
-     border: 1px solid #ccc;
+     border: 1px solid #B2DFDB;
      border-radius: 6px;
      transition: 0.3s;
 }
 
 input:focus {
-     border-color: #764ba2;
+     border-color: #1B3A4B;
      outline: none;
-     box-shadow: 0px 0px 5px rgba(118, 75, 162, 0.5);
+     box-shadow: 0px 0px 5px rgba(0, 121, 107, 0.5);
 }
 
 .btn {
-     background: #667eea;
+     background: #1B3A4B;
      color: white;
      border: none;
-     padding: 12px;
+     padding: 14px;
      width: 100%;
      border-radius: 6px;
      cursor: pointer;
@@ -74,16 +74,16 @@ input:focus {
 }
 
 .btn:hover {
-     background: #5563c1;
+     background: #004D40;
 }
 
 .google-btn {
      display: flex;
      align-items: center;
      justify-content: center;
-     background: white;
-     border: 1px solid #ccc;
-     padding: 10px;
+     background: #ffffff;
+     border: 1px solid #B2DFDB;
+     padding: 12px;
      border-radius: 6px;
      margin-top: 10px;
      cursor: pointer;
@@ -91,7 +91,7 @@ input:focus {
 }
 
 .google-btn:hover {
-     background: #f3f3f3;
+     background: #E0F2F1;
 }
 
 .google-btn img {
@@ -101,11 +101,11 @@ input:focus {
 
 p {
      margin-top: 15px;
-     font-size: 12px;
+     font-size: 14px;
 }
 
 a {
-     color: #667eea;
+     color: #1B3A4B;
 }
 
 a:hover {
@@ -121,5 +121,10 @@ a:hover {
      display: flex;
      justify-content: flex-end;
      font-size: 12px;
+     color: #1B3A4B;
      margin: 10px 0;
+}
+
+.forgot-pass:hover {
+     text-decoration: underline;
 }
