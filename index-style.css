@@ -612,11 +612,12 @@ hr {
  }
  
  /* Date & Source */
- .date, .source {
+ .date {
      color: #B0C4DE;
      font-size: 13px;
      display: block;
-     margin-top: 5px;
+     margin-top: 10px;
+     padding: 0px 20px 0px 20px;
  }
  
  /* Pagination Buttons */
