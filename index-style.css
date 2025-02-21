@@ -4,6 +4,10 @@
      margin: 0;
 }
 
+body {
+     background-color: #F8F9FA;
+}
+
 p {
      font-family: Helvetica;
      text-align: justify;
@@ -559,101 +563,103 @@ hr {
      padding: 50px;
      background-color: #F8F9FA;
      text-align: center;
- }
- 
- .blogpost-header h1 {
+}
+
+.blogpost-header h1 {
      font-size: 42px;
      font-weight: 700;
      color: #1B3A4B;
      margin-bottom: 30px;
- }
- 
- /* Blog Container */
- .blogpost-container {
+}
+
+/* Blog Container */
+.blogpost-container {
      display: flex;
      flex-wrap: wrap;
      gap: 30px;
      justify-content: center;
      align-items: stretch;
- }
- 
+}
+
  /* Individual Blog Post */
- .blogpost {
-     width: 350px;
+.blogpost {
+     width: 375px;
      background: #1B3A4B;
      border-radius: 12px;
      overflow: hidden;
      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
      animation: fadeInUp 0.8s ease-in-out;
- }
- 
- .blogpost:hover {
+     height: 525px;
+     margin-bottom: 30px;
+}
+
+.blogpost:hover {
      transform: scale(1.05);
      box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
- }
- 
- .blogpost img {
+}
+
+.blogpost img {
      width: 100%;
-     height: 250px;
+     height: 310px;
      object-fit: cover;
      transition: transform 0.3s ease-in-out;
- }
- 
- .blogpost:hover img {
+}
+
+.blogpost:hover img {
      transform: scale(1.1);
- }
- 
- /* Blog Content */
- .blog-content {
+}
+
+/* Blog Content */
+.blog-content {
      padding: 20px;
      color: #F8F9FA;
-     font-size: 15px;
+     font-size: 20px;
      line-height: 1.6;
- }
- 
+}
+
  /* Date & Source */
- .date {
+.date {
      color: #B0C4DE;
-     font-size: 13px;
+     font-size: 14px;
      display: block;
-     margin-top: 10px;
+     margin-top: 20px;
      padding: 0px 20px 0px 20px;
- }
- 
- /* Pagination Buttons */
- .button-container-blog {
+}
+
+/* Pagination Buttons */
+.button-container-blog {
      display: flex;
      justify-content: center;
      gap: 10px;
      margin-top: 20px;
- }
- 
- .button-blog {
+}
+
+.button-blog {
      width: 14px;
      height: 14px;
      border-radius: 50%;
      background-color: #B0C4DE;
      border: none;
      transition: background-color 0.3s ease, transform 0.3s ease;
- }
- 
- .button-blog:hover, .button-blog.active {
+}
+
+.button-blog:hover, .button-blog.active {
      background-color: #1B3A4B;
      transform: scale(1.2);
- }
- 
- /* Animations */
- @keyframes fadeInUp {
+}
+
+/* Animations */
+@keyframes fadeInUp {
      from {
-         opacity: 0;
-         transform: translateY(30px);
+          opacity: 0;
+          transform: translateY(30px);
      }
      to {
-         opacity: 1;
-         transform: translateY(0);
+          opacity: 1;
+          transform: translateY(0);
      }
- }
- 
+}
+
 
 
 
