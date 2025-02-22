@@ -47,7 +47,20 @@ h1 {
      text-align: justify;
      justify-content: center;
      align-items: center;
-     justify-items: center;
+     overflow: hidden;
+     position: relative;
+}
+
+ /* Subtle Fade-in & Slide for the Whole Banner Content */
+@keyframes fadeSlideIn {
+     0% {
+          opacity: 0;
+          transform: translateY(50px);
+     }
+     100% {
+          opacity: 1;
+          transform: translateY(0);
+     }
 }
 
 .banner-content {
@@ -57,13 +70,18 @@ h1 {
      justify-content: center;
      align-items: center;
      width: 80%;
+     opacity: 0;
+     animation: fadeSlideIn 1.2s ease-out forwards;
 }
 
-.banner-text {
-     display: flex;
-     flex-direction: column;
+/* Shared Animation for Text & Image */
+.banner-text, .banner-image {
+     opacity: 0;
+     transform: translateY(50px);
+     animation: fadeSlideIn 1.5s ease-out 0.3s forwards;
 }
 
+/* Stylish Header Animation */
 .banner-content h1 {
      font-size: 40.5px;
      color: #FFFFFF;
@@ -72,17 +90,33 @@ h1 {
      line-height: 1;
 }
 
+ /* Image Floating Effect */
+@keyframes float {
+     0% {
+          transform: translateY(0);
+     }
+     50% {
+          transform: translateY(-10px);
+     }
+     100% {
+          transform: translateY(0);
+     }
+}
+
 .banner-image img {
      width: 500px;
      height: 290px;
      border-radius: 10px;
+     animation: float 4s ease-in-out infinite;
 }
 
+ /* Smooth Paragraph Appearance */
 .banner-content p {
      width: auto;
      color: #f8f9fada;
      line-height: 1.5;
 }
+
 
 /* HIV Basics Section */
 .hiv-basics {
@@ -192,6 +226,7 @@ h1 {
 
 .main-content section {
      margin-bottom: 3rem;
+     scroll-margin-top: 100px; /* Adjust based on your header height */
 }
 
 .main-content h2 {
