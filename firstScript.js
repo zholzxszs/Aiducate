@@ -53,54 +53,79 @@ function scrollToTop() {
 
 // SUBTOPICS
 function toggleSubTopics(event, id, whatTopic) {
-     event.preventDefault(); // Prevent page jumping
-
+     event.preventDefault(); // Prevent default behavior
+ 
      let subTopics = document.getElementById(id);
      if (subTopics) {
-          subTopics.classList.toggle("show");
+         subTopics.classList.toggle("show");
      }
-
-     // Define topic sections
+ 
+     // Define all topic sections
      const topics = [
-          "hiv-overview",
-          "hiv-prevention",
-          "hiv-testing",
-          "hiv-starting-care",
-          "hiv-staying-care",
-          "hiv-living"
+         "hiv-overview",
+         "hiv-prevention",
+         "hiv-testing",
+         "hiv-starting-care",
+         "hiv-staying-care",
+         "hiv-living"
      ];
-
+ 
      // Hide all topics first
      topics.forEach(topic => {
-          document.getElementById(topic).style.display = "none";
+         document.getElementById(topic).style.display = "none";
      });
-
+ 
      // Show the selected topic
      let selectedTopic = document.getElementById(`hiv-${whatTopic}`);
      if (selectedTopic) {
-          selectedTopic.style.display = "block";
+         selectedTopic.style.display = "block";
+         selectedTopic.scrollIntoView({ behavior: "smooth" }); // Scroll to view
      }
-}
-
- // Add event listeners to sub-topic links
-document.querySelectorAll(".sub-topics a").forEach(link => {
+ }
+ 
+ // Add event listeners to sidebar topic links (OVERVIEW, PREVENTION, etc.)
+ document.querySelectorAll(".sidebar a").forEach(link => {
      link.addEventListener("click", function (event) {
-          event.preventDefault();
-     
-          let targetId = this.getAttribute("href").substring(1); // Get section ID (remove #)
-          let targetSection = document.getElementById(targetId);
-
-          if (targetSection) {
-               // Hide all sections
-               document.querySelectorAll(".main-content section").forEach(section => {
-                    section.style.display = "none";
-               });
-     
-               // Show the clicked section
-               targetSection.style.display = "block";
-     
-               // Scroll to the section smoothly
-               targetSection.scrollIntoView({ behavior: "smooth" });
-          }
+         event.preventDefault();
+ 
+         let targetId = this.getAttribute("href").substring(1); // Get section ID
+         let targetSection = document.getElementById(targetId);
+ 
+         if (targetSection) {
+             // Hide all sections first
+             document.querySelectorAll(".main-content section").forEach(section => {
+                 section.style.display = "none";
+             });
+ 
+             // Show the clicked section
+             targetSection.style.display = "block";
+ 
+             // Scroll to the section with an offset (to prevent being hidden under a fixed header)
+             window.scrollTo({
+                 top: targetSection.offsetTop - 100, // Adjust 100px as needed
+                 behavior: "smooth"
+             });
+         }
      });
-});
+ });
+ 
+ 
+ // Handle sub-topic clicks inside OVERVIEW
+ document.querySelectorAll(".sub-topics a").forEach(link => {
+     link.addEventListener("click", function (event) {
+         event.preventDefault();
+ 
+         // Hide all sections first
+         document.querySelectorAll(".main-content section").forEach(section => {
+             section.style.display = "none";
+         });
+ 
+         // Show only the OVERVIEW section
+         let overviewSection = document.getElementById("hiv-overview");
+         if (overviewSection) {
+             overviewSection.style.display = "block";
+             overviewSection.scrollIntoView({ behavior: "smooth" });
+         }
+     });
+ });
+ 
