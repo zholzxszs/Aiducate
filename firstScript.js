@@ -53,82 +53,82 @@ function scrollToTop() {
 
 // SUBTOPICS
 function toggleSubTopics(event, id, whatTopic) {
-    event.preventDefault(); // Prevent default anchor behavior
+     event.preventDefault(); // Prevent default anchor behavior
 
-    // Hide all sub-topics first
-    document.querySelectorAll(".sub-topics").forEach(subTopic => {
-        subTopic.classList.remove("show");
-    });
+     // Hide all sub-topics first
+     document.querySelectorAll(".sub-topics").forEach(subTopic => {
+          subTopic.classList.remove("show");
+     });
 
-    // Show the selected sub-topics
-    let subTopics = document.getElementById(id);
-    if (subTopics) {
-        subTopics.classList.add("show");
-    }
+     // Show the selected sub-topics
+     let subTopics = document.getElementById(id);
+     if (subTopics) {
+          subTopics.classList.add("show");
+     }
 
-    // Define topic sections
-    const topics = [
-        "hiv-overview",
-        "hiv-prevention",
-        "hiv-testing",
-        "hiv-starting-care",
-        "hiv-staying-care",
-        "hiv-living"
-    ];
+     // Define topic sections
+     const topics = [
+          "hiv-overview",
+          "hiv-prevention",
+          "hiv-testing",
+          "hiv-starting-care",
+          "hiv-staying-care",
+          "hiv-living"
+     ];
 
-    // Hide all topics first
-    topics.forEach(topic => {
-        let topicElement = document.getElementById(topic);
-        if (topicElement) {
-            topicElement.style.display = "none";
-        }
-    });
+     // Hide all topics first
+     topics.forEach(topic => {
+          let topicElement = document.getElementById(topic);
+          if (topicElement) {
+               topicElement.style.display = "none";
+          }
+     });
 
-    // Show the selected topic
-    let selectedTopic = document.getElementById(`hiv-${whatTopic}`);
-    if (selectedTopic) {
-        selectedTopic.style.display = "block";
+     // Show the selected topic
+     let selectedTopic = document.getElementById(`hiv-${whatTopic}`);
+     if (selectedTopic) {
+          selectedTopic.style.display = "block";
 
-        // Scroll to the section smoothly with offset for fixed header
-        const headerOffset = 80; // Adjust this based on your fixed header height
-        const elementPosition = selectedTopic.getBoundingClientRect().top + window.scrollY;
-        const offsetPosition = elementPosition - headerOffset;
+          // Scroll to the section smoothly with offset for fixed header
+          const headerOffset = 80; // Adjust this based on your fixed header height
+          const elementPosition = selectedTopic.getBoundingClientRect().top + window.scrollY;
+          const offsetPosition = elementPosition - headerOffset;
 
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: "smooth"
-        });
-    }
+          window.scrollTo({
+               top: offsetPosition,
+               behavior: "smooth"
+          });
+     }
 }
 
 // Add event listeners to sub-topic links
 document.querySelectorAll(".sub-topics a").forEach(link => {
-    link.addEventListener("click", function (event) {
-        event.preventDefault();
+     link.addEventListener("click", function (event) {
+          event.preventDefault();
 
-        let targetId = this.getAttribute("href").substring(1); // Get section ID (remove #)
-        let targetSection = document.getElementById(targetId);
+          let targetId = this.getAttribute("href").substring(1); // Get section ID (remove #)
+          let targetSection = document.getElementById(targetId);
 
-        if (targetSection) {
-            // Hide all sections
-            document.querySelectorAll(".main-content section").forEach(section => {
-                section.style.display = "none";
-            });
+          if (targetSection) {
+               // Hide all sections
+               document.querySelectorAll(".main-content section").forEach(section => {
+                    section.style.display = "none";
+               });
 
-            // Show the clicked section
-            targetSection.style.display = "block";
+               // Show the clicked section
+               targetSection.style.display = "block";
 
-            // Scroll to the section smoothly with offset
-            const headerOffset = 80; // Adjust this based on your fixed header height
-            const elementPosition = targetSection.getBoundingClientRect().top + window.scrollY;
-            const offsetPosition = elementPosition - headerOffset;
+               // Scroll to the section smoothly with offset
+               const headerOffset = 80; // Adjust this based on your fixed header height
+               const elementPosition = targetSection.getBoundingClientRect().top + window.scrollY;
+               const offsetPosition = elementPosition - headerOffset;
 
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: "smooth"
-            });
-        }
-    });
+               window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+               });
+          }
+     });
 });
 
 
