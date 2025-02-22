@@ -143,6 +143,8 @@ h1 {
 .sub-topics {
      list-style-type: disc;  /* Adds bullet points */
      padding-left: 20px;     /* Indents sub-topics */
+     display: none;
+     transition: all 0.3s ease-in-out;
  }
  
  .sub-topics li {
