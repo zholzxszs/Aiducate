@@ -50,3 +50,15 @@ window.onscroll = function() {
 function scrollToTop() {
      window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+// SUBTOPICS
+function toggleSubTopics(event, id) {
+     event.preventDefault(); // Prevent default anchor behavior
+     let subTopics = document.getElementById(id);
+     if (subTopics.style.display === "block") {
+         subTopics.style.display = "none";
+     } else {
+         subTopics.style.display = "block";
+     }
+ }
+ 
