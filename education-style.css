@@ -141,12 +141,29 @@ h1 {
  /* Sub-topics Styling */
 /* Style for Sub-topics */
 .sub-topics {
+     display: none;
      list-style-type: disc;  /* Adds bullet points */
      padding-left: 20px;     /* Indents sub-topics */
-     display: none;
-     transition: all 0.3s ease-in-out;
+     transition: max-height 0.3s ease-in-out;
+     overflow: hidden;
+     max-height: 0;
  }
  
+ .sub-topics.show {
+     display: block;
+     max-height: 500px; /* Adjust as needed */
+ }
+ 
+ .sub-topics a {
+     font-weight: 400;
+     color: #444;
+     transition: color 0.3s ease;
+ }
+ 
+ .sub-topics a:hover {
+     color: #e41e26;
+ }
+
  .sub-topics li {
      font-size: 16px;      /* Slightly smaller font */
      font-weight: normal;    /* Regular font weight */
@@ -165,18 +182,7 @@ h1 {
      height: 80px; /* Adjust this value based on your header height */
      margin-top: -80px; /* Pulls the section down */
  }
- 
- 
- .sub-topics a {
-     font-weight: 400;
-     color: #444;
-     transition: color 0.3s ease;
- }
- 
- .sub-topics a:hover {
-     color: #e41e26;
- }
- 
+
 
 /* Main Content Styles */
 .main-content {
