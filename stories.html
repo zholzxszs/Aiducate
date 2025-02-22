@@ -8,6 +8,7 @@
      <link rel="shortcut icon" href="Resources/Icons/websiteIcon.png" type="image/x-icon">
      <link rel="stylesheet" href="header-footer.css">
      <link rel="stylesheet" href="stories-style.css">
+     <script src="firstScript.js"></script>
 </head>
 <body>
      <header class="header">
@@ -30,41 +31,41 @@
      </header>
 
      <section class="stories">
-          <div class="story one">
-               <div class="story-img one">
-                    <img src="Resources/Background/imgBlog_One.jpg" alt="">
-                    <img src="Resources/Background/imgBlog_One.jpg" alt="">
+          <h2>Inspiring HIV & AIDS Stories</h2>
+          <div class="stories-container">
+               <div class="story-card" data-title="Hope Beyond the Diagnosis: Jerico’s Journey" 
+                    data-content="Jerico Paterno, a 34-year-old Filipino, thought his life was over when he was diagnosed with HIV in 2005...">
+                    <div class="story-image"></div>
+                    <h3>Hope Beyond the Diagnosis</h3>
+                    <p>Jerico’s Journey</p>
+                    <button class="read-more">Read More</button>
                </div>
 
-               <div class="story-text one">
-                    <h2>STORY ONE</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut possimus in dolores quas, dolore aperiam quae, doloremque quam provident beatae, magni quibusdam. Quam hic illo, voluptatem corporis nihil ratione eum.</p>
-               </div>
-          </div>
-
-          <div class="story two">
-               <div class="story-img two">
-                    <img src="Resources/Background/imgBlog_Two.jpg" alt="">
-                    <img src="Resources/Background/imgBlog_Two.jpg" alt="">
+               <div class="story-card" data-title="Dolzura Cortez: Breaking the Silence" 
+                    data-content="Ma. Dolzura Cortez became a trailblazer in the Philippines as the first person publicly to share her life with AIDS...">
+                    <div class="story-image"></div>
+                    <h3>Dolzura Cortez</h3>
+                    <p>Breaking the Silence</p>
+                    <button class="read-more">Read More</button>
                </div>
 
-               <div class="story-text two">
-                    <h2>STORY TWO</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque veniam ratione ipsam distinctio magnam! Cum ea voluptate culpa magni? Sequi assumenda soluta explicabo quisquam illum nam, excepturi culpa sint voluptate!</p>
-               </div>
-          </div>
-
-          <div class="story three">
-               <div class="story-img three">
-                    <img src="Resources/Background/imgBlog_Three.jpg" alt="">
-                    <img src="Resources/Background/imgBlog_Three.jpg" alt="">
-               </div>
-
-               <div class="story-text three">
-                    <h2>STORY THREE</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa temporibus, totam excepturi neque rerum enim officiis quae molestiae. Praesentium fugit atque eveniet sequi aliquid id fugiat suscipit nulla necessitatibus debitis!</p>
+               <div class="story-card" data-title="From Stigma to Self-Love" 
+                    data-content="Young Filipino men who have sex with men (MSM) often face unique challenges after an HIV diagnosis...">
+                    <div class="story-image"></div>
+                    <h3>From Stigma to Self-Love</h3>
+                    <p>MSM Stories in Metro Manila</p>
+                    <button class="read-more">Read More</button>
                </div>
           </div>
      </section>
+
+     <!-- Modal -->
+     <div class="modal" id="storyModal">
+          <div class="modal-content">
+               <span class="close">&times;</span>
+               <h2 id="modal-title"></h2>
+               <p id="modal-text"></p>
+          </div>
+     </div>
 </body>
 </html>
