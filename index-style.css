@@ -626,28 +626,6 @@ hr {
      padding: 0px 20px 0px 20px;
 }
 
-/* Pagination Buttons */
-.button-container-blog {
-     display: flex;
-     justify-content: center;
-     gap: 10px;
-     margin-top: 20px;
-}
-
-.button-blog {
-     width: 14px;
-     height: 14px;
-     border-radius: 50%;
-     background-color: #B0C4DE;
-     border: none;
-     transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.button-blog:hover, .button-blog.active {
-     background-color: #1B3A4B;
-     transform: scale(1.2);
-}
-
 /* Animations */
 @keyframes fadeInUp {
      from {
