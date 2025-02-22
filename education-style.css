@@ -139,12 +139,11 @@ h1 {
  }
  
  /* Sub-topics Styling */
-/* Style for Sub-topics */
 .sub-topics {
      display: none;
      list-style-type: disc;  /* Adds bullet points */
      padding-left: 20px;     /* Indents sub-topics */
-     transition: max-height 0.3s ease-in-out;
+     transition: max-height 0.5s ease-in-out, opacity 0.4s ease-in-out;
      overflow: hidden;
      max-height: 0;
  }
