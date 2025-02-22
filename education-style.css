@@ -110,6 +110,10 @@ h1 {
      animation: float 4s ease-in-out infinite;
 }
 
+.banner-text h1, .banner-text p {
+     animation: float 4s ease-in-out infinite;
+}
+
  /* Smooth Paragraph Appearance */
 .banner-content p {
      width: auto;
@@ -342,6 +346,17 @@ section {
      animation: fadeInUp 1s ease-out forwards;
 }
 
+/* Smooth fade-in effect for topics */
+.main-content section {
+     transition: opacity 0.3s ease-in-out;
+     opacity: 0;
+}
+
+ /* Ensure visible section is fully shown */
+.main-content section[style="display: block;"] {
+     opacity: 1;
+}
+
 /* Keyframes for the animation */
 @keyframes fadeInUp {
      from {
@@ -353,6 +368,7 @@ section {
           transform: translateY(0);
      }
 }
+
 
 /* SCROLL UP DESIGN */
 #scrollTopBtn {
