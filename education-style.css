@@ -31,6 +31,13 @@ body {
      background-color: #F8F9FA;
 }
 
+h1 {
+     color: #e41e26;
+     font-weight: 900;
+     font-size: 28px;
+     margin-bottom: 20px;
+}
+
 /* Main Banner */
 .main-banner {
      background-color: #1B3A4B;
@@ -91,42 +98,83 @@ body {
      border-radius: 10px;
      height: fit-content;
      position: sticky;
-     top: 100px;
+     top: 50px;
      margin-top: 16px;
-}
-
-.content-topics ul {
+ }
+ 
+ .content-topics ul {
      list-style: none;
      display: flex;
      gap: 10px;
      flex-direction: column;
-}
-
-.bullet {
+     padding-left: 0;
+ }
+ 
+ .bullet {
      font-size: 18px;
-}
-
-.content-topics h2 {
+ }
+ 
+ .content-topics h1 {
      color: #e41e26;
      margin-bottom: 1rem;
-     font-size: 1.2rem;
-}
-
-.content-topics li {
+     font-size: 1.5rem;
+ }
+ 
+ .content-topics li {
      font-size: 1.2rem;
      font-weight: 700;
-}
-
-.content-topics a {
+ }
+ 
+ .content-topics a {
      text-decoration: none;
      color: #1B3A4B;
      font-weight: 500;
      transition: color 0.3s ease;
-}
-
-.content-topics a:hover {
+     display: block;
+     /* padding: 5px 0; */
+ }
+ 
+ .content-topics a:hover {
      color: #e41e26;
-}
+ }
+ 
+ /* Sub-topics Styling */
+/* Style for Sub-topics */
+.sub-topics {
+     list-style-type: disc;  /* Adds bullet points */
+     padding-left: 20px;     /* Indents sub-topics */
+ }
+ 
+ .sub-topics li {
+     font-size: 16px;      /* Slightly smaller font */
+     font-weight: normal;    /* Regular font weight */
+     color: #333;
+ }
+ 
+ /* Ensure Sub-topics Align Well */
+ .sidebar ul .sub-topics{
+     padding-left: 40px; /* Adjusts left padding */
+     list-style: disc;
+ }
+
+ :target::before {
+     content: "";
+     display: block;
+     height: 80px; /* Adjust this value based on your header height */
+     margin-top: -80px; /* Pulls the section down */
+ }
+ 
+ 
+ .sub-topics a {
+     font-weight: 400;
+     color: #444;
+     transition: color 0.3s ease;
+ }
+ 
+ .sub-topics a:hover {
+     color: #e41e26;
+ }
+ 
 
 /* Main Content Styles */
 .main-content {
@@ -265,19 +313,28 @@ section {
 /* SCROLL UP DESIGN */
 #scrollTopBtn {
      position: fixed;
-     bottom: 20px;
-     right: 20px;
-     background-color: #ff4b5c;
+     bottom: 40px;
+     right: 35px;
+     background-color: #e41e26;
      color: white;
      border: none;
-     padding: 10px 15px;
+     padding: 5px 7px 5px 7px;
      font-size: 16px;
      cursor: pointer;
      border-radius: 5px;
      display: none;
+     opacity: 0.85;
 }
 
 #scrollTopBtn:hover {
      background-color: #d43f4e;
+}
+
+button img {
+     width: 40px;
+     height: 40px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
 }
 
