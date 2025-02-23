@@ -132,6 +132,23 @@ document.querySelectorAll(".sub-topics a").forEach(link => {
 });
 
 
+// FOR STORIES 
+function openModal(title, img, text) {
+          document.getElementById("modalTitle").innerText = title;
+          document.getElementById("modalImage").src = img;
+          document.getElementById("modalText").innerText = text;
+          document.getElementById("storyModal").style.display = "flex";
+}
+
+function closeModal() {
+          document.getElementById("storyModal").style.display = "none";
+}
+
+
+
+
+
+
 
 
 
