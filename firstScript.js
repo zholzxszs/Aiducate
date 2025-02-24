@@ -190,7 +190,7 @@ function openModal(img, modalContent) {
           sSix: "Elena Felix Empowers Women Living with HIV",
           sSeven: "From Stigma to Self-Love: MSM Stories in Metro Manila",
           sEight: "Unconditional Love: Anthony's Triumph Over Darkness",
-          sNine: "EJ Taguba Inspires Youth to Fight HIV Stigma",
+          sNine: "EJ Taguba Inspires Youth to Fight HIV Stigma"
      };
 
      // Set modal text and title based on the key passed
