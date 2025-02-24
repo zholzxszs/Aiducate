@@ -30,42 +30,136 @@
           </nav>
      </header>
 
-     <section class="stories">
-          <h2>Inspiring HIV & AIDS Stories</h2>
-          <div class="stories-container">
-               <div class="story-card" data-title="Hope Beyond the Diagnosis: Jerico’s Journey" 
-                    data-content="Jerico Paterno, a 34-year-old Filipino, thought his life was over when he was diagnosed with HIV in 2005...">
-                    <div class="story-image"></div>
-                    <h3>Hope Beyond the Diagnosis</h3>
-                    <p>Jerico’s Journey</p>
-                    <button class="read-more">Read More</button>
+     <section class="stories-section">
+          <h1>Be Inspired With the Following HIV and AIDS Stories</h1>
+          <div class="story-grid">
+               <div class="story-card" onclick="openModal('Story 1', 'Resources/Background/imgBlog_One.jpg', 'This is the inspiring story of person 1.')">
+                    <div class="inner">
+                         <div class="front"><img src="Resources/Background/imgBlog_One.jpg" alt="Story 1"></div>
+                         <div class="back"><h3>Story 1</h3></div>
+                    </div>
+               </div>
+               
+               <div class="story-card" onclick="openModal('Story 2', 'Resources/Background/imgBlog_Two.jpg', 'This is the inspiring story of person 2.')">
+                    <div class="inner">
+                         <div class="front"><img src="Resources/Background/imgBlog_Two.jpg" alt="Story 2"></div>
+                         <div class="back"><h3>Story 2</h3></div>
+                    </div>
                </div>
 
-               <div class="story-card" data-title="Dolzura Cortez: Breaking the Silence" 
-                    data-content="Ma. Dolzura Cortez became a trailblazer in the Philippines as the first person publicly to share her life with AIDS...">
-                    <div class="story-image"></div>
-                    <h3>Dolzura Cortez</h3>
-                    <p>Breaking the Silence</p>
-                    <button class="read-more">Read More</button>
+               <div class="story-card" onclick="openModal('Story 3', 'Resources/Background/imgBlog_One.jpg', 'This is the inspiring story of person 3.')">
+                    <div class="inner">
+                         <div class="front"><img src="Resources/Background/imgBlog_One.jpg" alt="Story 3"></div>
+                         <div class="back"><h3>Story 3</h3></div>
+                    </div>
                </div>
 
-               <div class="story-card" data-title="From Stigma to Self-Love" 
-                    data-content="Young Filipino men who have sex with men (MSM) often face unique challenges after an HIV diagnosis...">
-                    <div class="story-image"></div>
-                    <h3>From Stigma to Self-Love</h3>
-                    <p>MSM Stories in Metro Manila</p>
-                    <button class="read-more">Read More</button>
+               <div class="story-card" onclick="openModal('Story 4', 'Resources/Background/imgBlog_Two.jpg', 'This is the inspiring story of person 4.')">
+                    <div class="inner">
+                         <div class="front"><img src="Resources/Background/imgBlog_Two.jpg" alt="Story 4"></div>
+                         <div class="back"><h3>Story 4</h3></div>
+                    </div>
+               </div>
+
+               <div class="story-card" onclick="openModal('Story 5', 'Resources/Background/imgBlog_One.jpg', 'This is the inspiring story of person 5.')">
+                    <div class="inner">
+                         <div class="front"><img src="Resources/Background/imgBlog_One.jpg" alt="Story 5"></div>
+                         <div class="back"><h3>Story 5</h3></div>
+                    </div>
+               </div>
+
+               <div class="story-card" onclick="openModal('Story 6', 'Resources/Background/imgBlog_Two.jpg', 'This is the inspiring story of person 6.')">
+                    <div class="inner">
+                         <div class="front"><img src="Resources/Background/imgBlog_Two.jpg" alt="Story 6"></div>
+                         <div class="back"><h3>Story 6</h3></div>
+                    </div>
+               </div>
+
+               <div class="story-card" onclick="openModal('Story 7', 'Resources/Background/imgBlog_One.jpg', 'This is the inspiring story of person 7.')">
+                    <div class="inner">
+                         <div class="front"><img src="Resources/Background/imgBlog_One.jpg" alt="Story 7"></div>
+                         <div class="back"><h3>Story 7</h3></div>
+                    </div>
+               </div>
+
+               <div class="story-card" onclick="openModal('Story 8', 'Resources/Background/imgBlog_Two.jpg', 'This is the inspiring story of person 8.')">
+                    <div class="inner">
+                         <div class="front"><img src="Resources/Background/imgBlog_Two.jpg" alt="Story 8"></div>
+                         <div class="back"><h3>Story 8</h3></div>
+                    </div>
+               </div>
+
+               <div class="story-card" onclick="openModal('Story 9', 'Resources/Background/imgBlog_Two.jpg', 'This is the inspiring story of person 9.')">
+                    <div class="inner">
+                         <div class="front"><img src="Resources/Background/imgBlog_Two.jpg" alt="Story 9"></div>
+                         <div class="back"><h3>Story 9</h3></div>
+                    </div>
                </div>
           </div>
      </section>
 
      <!-- Modal -->
-     <div class="modal" id="storyModal">
-          <div class="modal-content">
-               <span class="close">&times;</span>
-               <h2 id="modal-title"></h2>
-               <p id="modal-text"></p>
+     <div id="storyModal" class="modal">
+     <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <img id="modalImage" src="" alt="Story Image">
+          <div>
+               <h2 id="modalTitle"></h2>
+               <p id="modalText"></p>
           </div>
      </div>
+     </div>
+
+     <section class="footer-section">
+          <div class="footer-first-row">
+               <div class="footer-logo-description">
+                    <div class="footer-logo">
+                         <img src="Resources/Icons/websiteIcon.png" alt="Website Icon">
+                         <h3>AIDUCATE</h3>
+                    </div>
+                    <div class="footer-tagline">
+                         <p>Spreading knowledge, breaking stigma, and supporting lives.</p>
+                    </div>
+               </div>
+               <div class="footer-links">
+                    <div class="links about-us">
+                         <h4>About Us</h4>
+                         <ul>
+                         <li>About</li>
+                         <li>Our Mission</li>
+                         <li>Blog</li>
+                         <li>Success Stories</li>
+                         </ul>
+                    </div>
+                    <div class="links support">
+                         <h4>Support</h4>
+                         <ul>
+                         <li>FAQ</li>
+                         <li>Get Involved</li>
+                         <li>Contact Us</li>
+                         </ul>
+                    </div>
+                    <div class="links resources">  
+                         <h4>Resources</h4>
+                         <ul>
+                         <li>Prevention and Treatment</li>
+                         <li>Support Groups</li>
+                         <li>Community Guidelines</li>
+                         </ul>
+                    </div>
+                    <div class="links legal">
+                         <h4>Legal</h4>
+                         <ul>
+                         <li>Terms</li>
+                         <li>Privacy</li>
+                         </ul>
+                    </div>
+               </div>
+          </div>
+          <hr>
+          <div class="footer-second-row">
+               <h6>© 2025 AIDUCATE. All rights reserved.</h6>
+          </div>
+     </section>
 </body>
 </html>
