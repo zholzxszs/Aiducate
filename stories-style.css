@@ -169,9 +169,15 @@ h1 {
     cursor: pointer;
 }
 
+/* .modal-active .header {
+    background-color: rgba(0, 0, 0, 0.1); /* Adjust for grayish effect 
+    transition: background 0.3s ease-in-out;
+} */
+
 #modalTitle {
     font-size: 28px;
     font-weight: 700;
+    color: #D32F2F;
 }
 
 
