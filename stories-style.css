@@ -27,94 +27,133 @@ a {
      color: #1B3A4B;
 }
 
-body {
-     background: linear-gradient(135deg, #FF4D4D 0%, #D32F2F 100%);
-}
-
 /* STORIES SECTION */
-.stories {
-     padding: 50px 20px;
+.stories-section {
+    margin-top: 120px; /* Adjusted to prevent navigation bar overlap */
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
 }
 
-.stories h2 {
-     font-size: 2em;
-     margin-bottom: 20px;
+h1 {
+    color: #333;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
 }
 
-.stories-container {
-     display: flex;
-     gap: 20px;
-     justify-content: center;
-     flex-wrap: wrap;
+.story-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ensures 3 per row */
+    gap: 30px;
+    padding: 20px;
 }
 
 .story-card {
-     background: white;
-     padding: 20px;
-     border-radius: 12px;
-     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-     width: 250px;
-     transition: transform 0.3s ease-in-out;
-     cursor: pointer;
+    width: 100%;
+    height: 400px;
+    perspective: 1000px;
+    cursor: pointer;
+    position: relative;
 }
 
-.story-card:hover {
-     transform: translateY(-5px);
+.story-card .inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: transform 0.7s ease-in-out; /* Slower and smoother flip */
+    transform-style: preserve-3d;
 }
 
-.story-image {
-     width: 100%;
-     height: 150px;
-     background: #ccc;
-     border-radius: 8px;
-     margin-bottom: 15px;
+.story-card:hover .inner {
+    transform: rotateY(180deg);
 }
 
-h3 {
-     font-size: 1.2em;
+.story-card .front, .story-card .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-.read-more {
-     background-color: #e63946;
-     color: white;
-     border: none;
-     padding: 10px;
-     border-radius: 6px;
-     cursor: pointer;
-     margin-top: 10px;
-     transition: background 0.3s;
+.story-card .front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 1.5s;
 }
 
-.read-more:hover {
-     background-color: #c22f3c;
+/* Grayscale all stories when hovering over the grid */
+.story-grid:hover .story-card img {
+    filter: grayscale(100%);
+    transition: filter 0.7s;
 }
 
-/* Modal */
+/* Keep hovered story in full color */
+.story-card:hover img {
+    filter: grayscale(0%) !important;
+}
+
+/* Back of the story card */
+.story-card .back {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg);
+}
+
+/* Modal Styles */
 .modal {
-     display: none;
-     position: fixed;
-     z-index: 10;
-     left: 0;
-     top: 0;
-     width: 100%;
-     height: 100%;
-     background: rgba(0, 0, 0, 0.5);
-     justify-content: center;
-     align-items: center;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-content {
-     background: white;
-     padding: 20px;
-     border-radius: 10px;
-     width: 80%;
-     max-width: 500px;
-     text-align: left;
+    background: white;
+    padding: 20px;
+    width: 50%;
+    border-radius: 10px;
+    text-align: left;
+    display: flex;
+    gap: 20px;
+}
+
+.modal-content img {
+    width: 40%;
+    border-radius: 10px;
 }
 
 .close {
-     float: right;
-     font-size: 24px;
-     cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
 }
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+    .story-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 per row on smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .story-grid {
+        grid-template-columns: repeat(1, 1fr); /* 1 per row on mobile */
+    }
+}
+
 
