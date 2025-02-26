@@ -10,49 +10,58 @@
      <script src="chatbot-script.js" defer></script>
 </head>
 <body>
+     <!-- HEADER SECTION -->
      <header class="header">
+          <!-- Logo and Website Name -->
           <div class="logo-and-name">
                <img src="Resources/Icons/websiteIcon.png" alt="AIDUCATE Logo">
                <h2 class="logo">AIDUCATE</h2>
           </div>
 
-          <!-- Burger Menu Icon -->
+          <!-- Burger Menu Icon for Mobile Navigation -->
           <div class="burger-menu" id="burgerMenu">
                ☰
           </div>
 
+          <!-- Navigation Menu -->
           <nav class="nav" id="navMenu">
+               <!-- Navigation Links -->
                <div class="nav-links">
                     <a href="landing-page.html">HOME</a>
                     <a href="education.html">EDUCATION</a>
                     <a href="stories.html">STORIES</a>
                     <a href="get-help.html">GET HELP</a>
                </div>
+
+               <!-- Welcome Message -->
                <div class="welcome-greetings" id="welcomeText">
                     <h3>HELLO, JUDIEL LEGASPINA</h3>
                </div>
+
+               <!-- Profile Button -->
                <div class="profile-button" id="profileButton">
                     <button>Profile</button>
                </div>
           </nav>
      </header>
 
+     <!-- CHAT SECTION -->
      <section class="chat-container">
           <!-- Chat Header -->
           <div class="chat-header">
                <h2>AIDUCATE CHATBOT</h2>
           </div>
 
-          <!-- Chat Box -->
+          <!-- Chat Box (Displays Messages) -->
           <div class="chat-box" id="chat-box">
-               <!-- AI Message -->
+               <!-- AI's Initial Greeting Message -->
                <div class="message bot-message">
                     <img src="Resources/Icons/iconAI.png" alt="AI">
                     <span>Hello! How can I help you today?</span>
                </div>
           </div>
 
-          <!-- Chat Input -->
+          <!-- Chat Input Field -->
           <div class="chat-input">
                <input type="text" id="user-input" placeholder="Type a message...">
                <button onclick="sendMessage()">Send</button>
