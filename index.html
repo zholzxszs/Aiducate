@@ -6,210 +6,68 @@
      <title>AIDUCATE</title>
      <link rel="stylesheet" href="index-style.css">
      <link rel="shortcut icon" href="Resources/Icons/websiteIcon.png" type="image/x-icon">
-     <script src="firstScript.js" defer></script>
+     <script src="firstScript.js"></script>
 </head>
 <body>
-     <section class="hero">
-          <header class="header">
-               <div class="logo-and-name">
-                    <img src="Resources/Icons/websiteIcon.png" alt="AIDUCATE Logo">
-                    <h2 class="logo">AIDUCATE</h2>
-               </div>
-               <nav class="nav">
-                    <div>
-                         <a href="index.html">HOME</a>
-                         <a href="education.html">EDUCATION</a>
-                         <a href="stories.html">STORIES</a>
-                         <a href="get-help.html">GET HELP</a>
-                    </div>
-                    <div class="welcome-greetings">
-                         <h3>HELLO, JGL</h3>
-                    </div>
-               </nav>
-          </header>
-          <div class="hero-figure">
-               <div class="carousel-container">
-                    <div class="text-carousel">
-                         <h1 class="carousel-text">BE INFORMED! BE INFORMED! BE INFORMED!</h1>
-                    </div>
-               </div>
-               <img src="Resources/Background/imgHome.png" alt="A hand Holding a Ribbon">
-               <h2 class="hero-message">KNOW YOUR STATUS!</h2>
+     <!-- SPLASHSCREEN -->
+     <section class="splashscreen-section">
+          <div class="container-splash">
+               <img src="Resources/Icons/websiteIcon.png" alt="Ribbon Icon">
+               <h1>AIDUCATE</h1>
           </div>
      </section>
 
-     <section class="message-container">
-          <div class="image-container">
-               <img src="Resources/Background/imgHome_2.jpg" alt="HIV Awareness Image" class="capsule-image">
-               <img src="Resources/Background/imgSlantingLines.png" alt="Slanting Lines" class="slanting-lines">
-          </div>
-          <div class="text-container">
-               <div class="text-square">
-                    <h2><span class="text-white">HIV IS <br>A VIRUS,</span> <br> <span class="text-whiter">NOT A <br> VERDICT</span></h2>
-                    <p>"Knowledge saves lives. Compassion breaks barriers. Hope changes everything."</p>
-               </div>
-          </div>
-     </section>
+     <div class="container">
+          <!-- Login Box -->
+          <div class="auth-box login-box active">
+               <h2>Login to your account</h2>
+               <h4>Hello, welcome back!</h4>
+               <form>
+                    <input type="email" placeholder="Email address" required>
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                    <div class="password-options">
+                         <label class="show-password-container">
+                              <input type="checkbox" id="showLoginPassword"> Show Password
+                         </label>
+                         <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="btn" id="btnSignIn">Sign in</button>
+               </form>
 
-     <section class="info-section">
-               <div class="overview-info">
-                    <div class="trending one">
-                         <div class="trending-image one">
-                              <img src="Resources/Background/imgStatistics.png" alt="HIV/AIDS Statistics">
-                         </div>
-                         <div class="trending-text">
-                              <h3>HIV/AIDS Status in the Philippines End of Year 2024</h3>
-                              <p>As of December 2024, the Philippines faces a growing HIV/AIDS crisis with about 215,400 PLHIV and an average of 50 new diagnoses daily, mainly among young males. Only about 64% are on Antiretroviral Therapy.</p>
-                         </div>
-                    </div>
-                    <div class="trending two">
-                         <div class="trending-image two">
-                              <img src="Resources/Background/imgSyndemic.png" alt="HIV/AIDS Syndemic">
-                         </div>
-                         <div class="trending-text">
-                              <h3>Interconnected Challenges in the Philippines' HIV/AIDS Crisis</h3>
-                              <p>The Philippines faces a rapidly growing HIV/AIDS crisis with about 55 new diagnoses daily and only 64% of people living with HIV on antiretroviral therapy. Late detection and infections among young men who have sex with men are major concerns.</p>
-                         </div>
-                    </div>
+               <!-- Horizontal Line with OR -->
+               <div class="separator"><span>OR</span></div>
+
+               <div class="google-btn">
+                    <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google logo">
+                    <span>Sign in with Google</span>
                </div>
+               <p>Don't have an account? <a href="#" id="showRegister">Sign up</a></p>
+          </div>
+
+          <!-- Registration Box -->
+          <div class="auth-box registration-box">
+               <h2>Create an account</h2>
+               <h4>Set up your account to continue.</h4>
+               <form>
+                    <input type="text" id="nameInput" placeholder="Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="password" id="registerPassword" placeholder="Password" required>
+                    <div class="show-password-container">
+                         <input type="checkbox" id="showRegisterPassword">
+                         <label for="showRegisterPassword">Show Password</label>
+                    </div>
+                    <button type="submit" class="btn">Sign up</button>
+               </form>
           
-               <div class="sidebar-hiv-basics">
-                    <div class="hiv-basics">
-                         <h3>HIV BASICS</h3>
-                    </div>
-                         <div class="HIV testing">
-                              <h4>HIV Testing</h4>
-                              <p>Getting tested is a key step in knowing your HIV status.</p>
-                         </div>
-                    <hr>
-                         <div class="HIV prep">
-                              <h4>PrEP</h4>
-                              <p>A preventive pill that blocks HIV before it can infect you.</p>
-                         </div>
-                    <hr>
-                         <div class="HIV suppression">
-                              <h4>Viral Suppression</h4>
-                              <p>Regular HIV medication keeps the virus at very low levels in your body.</p>
-                         </div>
-                    <hr>
-                         <div class="HIV treatment">
-                              <h4>Treatment as Prevention</h4>
-                              <p>Taking HIV medicine helps both your health and protects your partners.</p>
-                         </div>
-                    <div class="button-container">
-                         <button id="goEducation" class="btn-basics">All HIV Basics</button>
-                    </div>
+               <!-- Horizontal Line with OR -->
+               <div class="separator"><span>OR</span></div>
+          
+               <div class="google-btn">
+                    <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google logo">
+                    <span>Sign up with Google</span>
                </div>
-     </section>
-
-     <section class="blogpost-section">
-          <div class="blogpost-header">
-               <h1>Philippines Latest Blogpost</h1>
-          </div>
-
-          <div class="blogpost-container">
-               <div class="blogpost one">
-                    <a href="https://www.dw.com/en/philippines-manila-hiv-aids-rise-in-cases/a-71148127" target="_blank">
-                         <img src="Resources/Background/imgBlog_One.jpg" alt="Blogpost Image One" class="blog one">
-                         <p class="date one">December 23, 2024 | DW News</p>
-                         <p class="blog-content one">Philippines Faces Alarming HIV Surge: 50 New Cases Diagnosed Daily</p>
-                    </a>
-               </div>
-               
-               <div class="blogpost two">
-                    <a href="https://www.undp.org/philippines/blog/igniting-change-barangay-level-filipino-youths-role-hiv-response" target="_blank">
-                         <img src="Resources/Background/imgBlog_Two.jpg" alt="Blogpost Image Two" class="blog two">
-                         <p class="date two">January 23, 2025 | UNDP Philippines</p>
-                         <p class="blog-content one">Youth-Led Initiatives: Fighting HIV Stigma at the Barangay Level</p>
-                    </a>
-               </div>
-
-               <div class="blogpost three">
-                    <a href="https://pubmed.ncbi.nlm.nih.gov/37235306/" target="_blank">
-                         <img src="Resources/Background/imgBlog_Three.jpg" alt="Blogpost Image Three" class="blog three">
-                         <p class="date three">April 30, 2023 | PubMed Central</p>
-                         <p class="blog-content three">HIV Epidemic in the Philippines: Challenges and Policy Gaps Explored</p>
-                    </a>
-               </div>
-
-               <div class="blogpost four">
-                    <a href="https://www.abs-cbn.com/news/health-science/2024/12/24/philippines-faces-alarming-rise-in-hiv-infections-0810" target="_blank">
-                         <img src="Resources/Background/imgBlog_Four.jpg" alt="Blogpost Image Three" class="blog three">
-                         <p class="date three">December 23, 2024 | ABS-CBN News</p>
-                         <p class="blog-content four">Alarming HIV Surge in the Philippines: Cases Rise by 543% Since 2010</p>
-                    </a>
-               </div>
-
-               <div class="blogpost five">
-                    <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11705359/" target="_blank">
-                         <img src="Resources/Background/imgBlog_Five.jpg" alt="Blogpost Image Three" class="blog three">
-                         <p class="date three">January 6, 2025 | PubMed Central</p>
-                         <p class="blog-content five">Projected Increase: PLHIV in the Philippines Could Reach 401,700 by 2030</p>
-                    </a>
-               </div>
-
-               <div class="blogpost six">
-                    <a href="https://journals.sagepub.com/doi/10.1177/23259582241312294" target="_blank">
-                         <img src="Resources/Background/imgBlog_Six.jpg" alt="Blogpost Image Three" class="blog three">
-                         <p class="date three">January 6, 2025 | SAGE Journals</p>
-                         <p class="blog-content six">Decentralized HIV Diagnosis and Dolutegravir-Based Therapy Implemented in the Philippines</p>
-                    </a>
-               </div>
-          </div>
-     </section>
-
-     <hr>
-
-     <section class="footer-section">
-          <div class="footer-first-row">
-               <div class="footer-logo-description">
-                    <div class="footer-logo">
-                         <img src="Resources/Icons/websiteIcon.png" alt="Website Icon">
-                         <h3>AIDUCATE</h3>
-                    </div>
-                    <div class="footer-tagline">
-                         <p>Spreading knowledge, breaking stigma, and supporting lives.</p>
-                    </div>
-               </div>
-               <div class="footer-links">
-                    <div class="links about-us">
-                         <h4>About Us</h4>
-                         <ul>
-                         <li>About</li>
-                         <li>Our Mission</li>
-                         <li>Blog</li>
-                         <li>Success Stories</li>
-                         </ul>
-                    </div>
-                    <div class="links support">
-                         <h4>Support</h4>
-                         <ul>
-                         <li>FAQ</li>
-                         <li>Get Involved</li>
-                         <li>Contact Us</li>
-                         </ul>
-                    </div>
-                    <div class="links resources">  
-                         <h4>Resources</h4>
-                         <ul>
-                         <li>Prevention and Treatment</li>
-                         <li>Support Groups</li>
-                         <li>Community Guidelines</li>
-                         </ul>
-                    </div>
-                    <div class="links legal">
-                         <h4>Legal</h4>
-                         <ul>
-                         <li>Terms</li>
-                         <li>Privacy</li>
-                         </ul>
-                    </div>
-               </div>
-          </div>
-          <hr>
-          <div class="footer-second-row">
-               <h6>© 2025 AIDUCATE. All rights reserved.</h6>
-          </div>
-     </section>
+               <p>Already have an account? <a href="#" id="showLogin">Sign in</a></p>
+          </div>          
+     </div>
 </body>
 </html>
