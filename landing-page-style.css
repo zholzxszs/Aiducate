@@ -542,6 +542,14 @@ hr {
      text-decoration: underline;
 }
 
+#unique-about {
+     color: #f8f9fae5;
+}
+
+#unique-about li {
+     font-weight: 400;
+}
+
 /* Social Media Icons */
 .social-icons {
      display: flex;
