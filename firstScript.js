@@ -304,6 +304,28 @@ btnHivBasics.addEventListener("click", function () {
 })
 
 
+// FOR ABOUT WEBSITE
+// Scroll animation for About Section
+document.addEventListener("DOMContentLoaded", function() {
+     const aboutSection = document.querySelector(".about");
+     
+     function revealOnScroll() {
+          const sectionTop = aboutSection.getBoundingClientRect().top;
+          const screenHeight = window.innerHeight;
+
+          if (sectionTop < screenHeight * 0.8) {
+               aboutSection.style.opacity = "1";
+               aboutSection.style.transform = "translateY(0)";
+          }
+     }
+
+     window.addEventListener("scroll", revealOnScroll);
+});
+
+
+
+
+
 
 
 
