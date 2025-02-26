@@ -42,11 +42,11 @@ h1 {
 .main-banner {
      background-color: #1B3A4B;
      padding: 3rem 2rem;
-     height: 75vh;
+     min-height: 75vh;
      display: flex;
-     text-align: justify;
      justify-content: center;
      align-items: center;
+     text-align: justify;
      overflow: hidden;
      position: relative;
 }
@@ -82,12 +82,12 @@ h1 {
 }
 
 /* Stylish Header Animation */
-.banner-content h1 {
-     font-size: 40.5px;
+.banner-text h1 {
+     font-size: 40px;
      color: #FFFFFF;
      margin-bottom: 1rem;
      text-align: left;
-     line-height: 1;
+     line-height: 1.2;
 }
 
  /* Image Floating Effect */
@@ -104,10 +104,12 @@ h1 {
 }
 
 .banner-image img {
-     width: 500px;
-     height: 290px;
+     width: 100%;
+     max-width: 500px;
+     height: auto;
      border-radius: 10px;
      animation: float 4s ease-in-out infinite;
+     object-fit: cover;
 }
 
 .banner-text h1, .banner-text p {
@@ -116,11 +118,63 @@ h1 {
 
  /* Smooth Paragraph Appearance */
 .banner-content p {
-     width: auto;
      color: #f8f9fada;
      line-height: 1.5;
+     text-align: justify;
+     max-width: 600px;
 }
 
+/* ----------- RESPONSIVE STYLES ----------- */
+
+/* Medium screens: Reduce text size slightly */
+@media (max-width: 1024px) {
+     .banner-content {
+          flex-direction: column; /* Stack text and image */
+          text-align: center;
+          width: 90%;
+     }
+
+     .banner-text h1 {
+          font-size: 34px;
+          text-align: center;
+     }
+
+     .banner-content p {
+          font-size: 16px;
+          max-width: 85%;
+          text-align: center;
+     }
+
+     .banner-image img {
+          max-width: 400px;
+     }
+}
+
+/* Small screens: Stack items & reduce sizes */
+@media (max-width: 768px) {
+     .main-banner {
+          padding: 2rem 1rem;
+     }
+
+     .banner-content {
+          flex-direction: column;
+          width: 100%;
+          text-align: center;
+     }
+
+     .banner-image img {
+          max-width: 90%;
+     }
+
+     .banner-text h1 {
+          font-size: 26px;
+     }
+
+     .banner-content p {
+          font-size: 14px;
+          max-width: 95%;
+     }
+}
 
 /* HIV Basics Section */
 .hiv-basics {
