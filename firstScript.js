@@ -1,51 +1,70 @@
 // FOR HOME
+// Wait until the DOM is fully loaded before executing the script
 document.addEventListener("DOMContentLoaded", function () {
+     
+     // Select all sections that need animation when they appear in the viewport
      const sections = document.querySelectorAll(".hero, .message-container, .info-section, .blogpost-section");
 
+     // Set up options for the Intersection Observer
      const options = {
-         threshold: 0.2, // Trigger when 20% of the section is visible
+          threshold: 0.2, // Trigger animation when 20% of the section is visible
      };
 
+     // Create an Intersection Observer to detect when sections come into view
      const observer = new IntersectionObserver(function (entries, observer) {
           entries.forEach(entry => {
+               // Check if the section is visible and hasn't been animated yet
                if (entry.isIntersecting && !entry.target.classList.contains("animate-section")) {
-                    entry.target.classList.add("animate-section");
+                    entry.target.classList.add("animate-section"); // Add animation class
                }
           });
      }, options);
 
+     // Observe each selected section to detect when it enters the viewport
      sections.forEach(section => {
           observer.observe(section);
      });
 });
 
+
 // CSS for animations
+// Create a <style> element to hold the animation styles
 const style = document.createElement("style");
+
 style.innerHTML = `
+     /* Initial state: sections are hidden with a slight scale-down and rotation effect */
      .hero, .message-container, .info-section, .blogpost-section {
-          opacity: 0;
-          transform: scale(0.95) rotateX(10deg);
-          transition: opacity 0.8s ease-out, transform 1s ease-out;
+          opacity: 0; /* Make sections invisible initially */
+          transform: scale(0.95) rotateX(10deg); /* Slight shrink and tilt */
+          transition: opacity 0.8s ease-out, transform 1s ease-out; /* Smooth transition */
      }
      
+     /* When the section becomes visible, apply animation */
      .animate-section {
-          opacity: 1;
-          transform: scale(1) rotateX(0deg);
+          opacity: 1; /* Fully visible */
+          transform: scale(1) rotateX(0deg); /* Reset scale and rotation */
      }
 `;
+
+// Append the <style> element to the document's <head>, applying the styles globally
 document.head.appendChild(style);
 
 
+
 // FOR EDUCATION
+// Show or hide the "Scroll to Top" button based on the scroll position
 window.onscroll = function() {
      let button = document.getElementById("scrollTopBtn");
+     
+     // If the user scrolls down more than 100px, display the button
      if (document.documentElement.scrollTop > 100) {
           button.style.display = "block";
      } else {
-          button.style.display = "none";
+          button.style.display = "none"; // Hide the button when scrolled to the top
      }
 };
 
+// Function to scroll back to the top smoothly
 function scrollToTop() {
      window.scrollTo({ top: 0, behavior: 'smooth' });
 }
@@ -218,58 +237,74 @@ document.addEventListener("DOMContentLoaded", function () {
      const showLogin = document.getElementById("showLogin");
      const showRegister = document.getElementById("showRegister");
      const isSignInClicked = document.getElementById("btnSignIn");
+     const isSignUpClicked = document.getElementById("btnSignUp");
 
      // Function to clear all input fields
      function clearFields(form) {
-          const inputs = form.querySelectorAll("input");
-          inputs.forEach(input => {
-               if (input.type !== "checkbox") {
-                    input.value = ""; // Clear text fields
-               } else {
-                    input.checked = false; // Uncheck checkboxes
-               }
-          });
+          if (form) {
+               const inputs = form.querySelectorAll("input");
+               inputs.forEach(input => {
+                    if (input.type !== "checkbox") {
+                         input.value = "";
+                    } else {
+                         input.checked = false;
+                    }
+               });
+          }
      }
 
-     if (showRegister) {
-          showRegister.addEventListener("click", function (event) {
-               event.preventDefault();
-               clearFields(loginBox);
-               loginBox.style.display = "none";
-               registrationBox.style.display = "block";
-          });
-     }
-
+     // Function to show login section and hide registration section
      if (showLogin) {
           showLogin.addEventListener("click", function (event) {
                event.preventDefault();
+               console.log("Sign-in clicked"); // Debugging
                clearFields(registrationBox);
-               loginBox.style.display = "block";
-               registrationBox.style.display = "none";
+               loginBox.classList.add("active");
+               registrationBox.classList.remove("active");
           });
      }
 
+     // Function to show registration section and hide login section
+     if (showRegister) {
+          showRegister.addEventListener("click", function (event) {
+               event.preventDefault();
+               console.log("Sign-up clicked"); // Debugging
+               clearFields(loginBox);
+               loginBox.classList.remove("active");
+               registrationBox.classList.add("active");
+          });
+     }
+
+     // Function to handle sign-in button
      if (isSignInClicked) {
           isSignInClicked.addEventListener("click", function () {
                window.open("landing-page.html", "_self");
           });
      }
 
-     // 🎬 **Show Splash Screen and Smoothly Fade Out**
-     setTimeout(function () {
-          containerSplash.classList.add("hide"); // Start fade-out animation
-          
-          setTimeout(function () {
-               splashscreenSection.style.display = "none"; // Hide splash screen completely after animation
-               container.classList.add("show"); // Show login container after splash fades out
-               loginBox.classList.add("active"); // Show the login box
-          }, 1500); // Matches the fade-out duration in CSS
-     }, 3000); // Delay before exiting splash screen
+     // Function to handle sign-up button
+     if (isSignUpClicked) {
+          isSignUpClicked.addEventListener("click", function () {
+               clearFields(registrationBox);
+               loginBox.classList.add("active");
+               registrationBox.classList.remove("active");
+          })
+     }
 
-     // Handle both Show Password checkboxes separately
+     // 🎬 Show Splash Screen and Smoothly Fade Out
+     setTimeout(function () {
+          containerSplash.classList.add("hide");
+
+          setTimeout(function () {
+               splashscreenSection.style.display = "none";
+               container.classList.add("show");
+               loginBox.classList.add("active");
+          }, 1500);
+     }, 3000);
+
+     // Handle Show Password
      const loginPasswordField = document.getElementById("loginPassword");
      const registerPasswordField = document.getElementById("registerPassword");
-
      const toggleLoginPassword = document.getElementById("showLoginPassword");
      const toggleRegisterPassword = document.getElementById("showRegisterPassword");
 
@@ -285,6 +320,7 @@ document.addEventListener("DOMContentLoaded", function () {
           });
      }
 });
+
 
 // HEADER RESPONSIVENESS
 document.addEventListener("DOMContentLoaded", function () {
