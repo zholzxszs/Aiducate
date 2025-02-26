@@ -25,109 +25,24 @@ a {
      background: linear-gradient(180deg, #F8F9FA 50%, #f8f9faf2 100%);
 }
 
-.header {
-     display: flex;
-     justify-content: left;
-     align-items: center;
-     margin-left: 50px;
-     margin-right: 50px;
-     margin-top: 20px;
-     position: relative;
-     z-index: 2;
-     gap: 30px;
-     animation: fadeSlideDown 1s ease-in-out;
-     width: 92%;
-}
-
-.logo-and-name {
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     gap: 3px;
-}
-
-.logo-and-name img {
-     width: 45px;
-     height: 45px;
-     transition: transform 0.3s ease-in-out;
-}
-
-.logo-and-name img:hover {
-     transform: scale(1.1) rotate(5deg);
-}
-
-.logo {
-     color: #1B3A4B;
-     font-size: 25px;
-     font-weight: 700;
-     letter-spacing: 0px;
-     margin-right: 50px;
-     transition: color 0.3s ease-in-out;
-}
-
-.logo:hover {
-     color: #D32F2F;
-}
-
-.nav {
-     display: flex;
-     justify-content: space-between;
-     width: 100%;
-     align-items: center;
-}
-
-.nav a {
-     color: #1B3A4B;
-     font-size: 16px;
-     font-weight: 700;
-     text-decoration: none;
-     margin-right: 60px;
-     position: relative;
-     transition: color 0.3s ease-in-out;
-}
-
-.nav a:hover {
-     color: #D32F2F;
-}
-
-.nav a::after {
-     content: "";
-     position: absolute;
-     width: 0;
-     height: 3px;
-     background: #D32F2F;
-     left: 50%;
-     bottom: -5px;
-     transform: translateX(-50%);
-     transition: width 0.3s ease-in-out;
-}
-
-.nav a:hover::after {
-     width: 100%;
-}
-
-.welcome-greetings h3 {
-     color: #1B3A4B;
-     font-size: 16px;
-     font-weight: 700;
-     padding: 8px 15px;
-     border-radius: 8px;
-     background: linear-gradient(135deg, #FF4D4D 0%, #D32F2F 100%);
-     color: white;
-     animation: fadeIn 1.5s ease-in-out;
-}
-
 .hero-figure {
      position: relative;
      height: calc(100vh - 80px);
-     margin-top: -80px;
+     margin-top: 50px;
+
+     /* Center at the bottom */
+     left: 50%;
+     bottom: 0;
+     transform: translateX(-50%);
+     z-index: 4000;
 }
 
 .hero-figure img {
-     width: 750px;
-     height: 620px;
+     width: 725px;
+     height: 615px;
      position: relative;
      left: 50%;
+     bottom: 0;
      transform: translate(-50%, -100%);
 }
 
