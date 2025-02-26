@@ -9,63 +9,89 @@
      <script src="firstScript.js"></script>
 </head>
 <body>
-     <!-- SPLASHSCREEN -->
+     <!-- SPLASH SCREEN SECTION -->
      <section class="splashscreen-section">
           <div class="container-splash">
+               <!-- Website Logo -->
                <img src="Resources/Icons/websiteIcon.png" alt="Ribbon Icon">
+               <!-- Website Name -->
                <h1>AIDUCATE</h1>
           </div>
      </section>
 
+     <!-- MAIN AUTHENTICATION CONTAINER -->
      <div class="container">
-          <!-- Login Box -->
+          <!-- LOGIN BOX (Initially Active) -->
           <div class="auth-box login-box active">
                <h2>Login to your account</h2>
                <h4>Hello, welcome back!</h4>
+               
+               <!-- Login Form -->
                <form>
+                    <!-- Email Input -->
                     <input type="email" placeholder="Email address" required>
+                    <!-- Password Input -->
                     <input type="password" id="loginPassword" placeholder="Password" required>
+                    
+                    <!-- Password Options: Show Password & Forgot Password -->
                     <div class="password-options">
                          <label class="show-password-container">
                               <input type="checkbox" id="showLoginPassword"> Show Password
                          </label>
                          <a href="#" class="forgot-password">Forgot Password?</a>
                     </div>
+                    
+                    <!-- Login Button -->
                     <button type="submit" class="btn" id="btnSignIn">Sign in</button>
                </form>
 
-               <!-- Horizontal Line with OR -->
+               <!-- Separator Line with OR -->
                <div class="separator"><span>OR</span></div>
 
+               <!-- Google Sign-In Button -->
                <div class="google-btn">
                     <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google logo">
                     <span>Sign in with Google</span>
                </div>
+
+               <!-- Redirect to Registration -->
                <p>Don't have an account? <a href="#" id="showRegister">Sign up</a></p>
           </div>
 
-          <!-- Registration Box -->
+          <!-- REGISTRATION BOX (Initially Hidden) -->
           <div class="auth-box registration-box">
                <h2>Create an account</h2>
                <h4>Set up your account to continue.</h4>
+               
+               <!-- Registration Form -->
                <form>
+                    <!-- Name Input -->
                     <input type="text" id="nameInput" placeholder="Name" required>
+                    <!-- Email Input -->
                     <input type="email" placeholder="Email Address" required>
+                    <!-- Password Input -->
                     <input type="password" id="registerPassword" placeholder="Password" required>
+                    
+                    <!-- Show Password Option -->
                     <div class="show-password-container">
                          <input type="checkbox" id="showRegisterPassword">
                          <label for="showRegisterPassword">Show Password</label>
                     </div>
+                    
+                    <!-- Registration Button -->
                     <button type="submit" class="btn">Sign up</button>
                </form>
           
-               <!-- Horizontal Line with OR -->
+               <!-- Separator Line with OR -->
                <div class="separator"><span>OR</span></div>
           
+               <!-- Google Sign-Up Button -->
                <div class="google-btn">
                     <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google logo">
                     <span>Sign up with Google</span>
                </div>
+               
+               <!-- Redirect to Login -->
                <p>Already have an account? <a href="#" id="showLogin">Sign in</a></p>
           </div>          
      </div>
