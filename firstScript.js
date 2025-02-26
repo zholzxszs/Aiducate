@@ -8,10 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
      const observer = new IntersectionObserver(function (entries, observer) {
           entries.forEach(entry => {
-               if (entry.isIntersecting) {
+               if (entry.isIntersecting && !entry.target.classList.contains("animate-section")) {
                     entry.target.classList.add("animate-section");
-               } else {
-                    entry.target.classList.remove("animate-section");
                }
           });
      }, options);
@@ -21,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
      });
 });
 
-// CSS to apply different animations
+// CSS for animations
 const style = document.createElement("style");
 style.innerHTML = `
      .hero, .message-container, .info-section, .blogpost-section {
@@ -36,6 +34,7 @@ style.innerHTML = `
      }
 `;
 document.head.appendChild(style);
+
 
 // FOR EDUCATION
 window.onscroll = function() {
@@ -200,13 +199,107 @@ function openModal(img, modalContent) {
      }
 
      // Set other modal elements
-     document.getElementById("modalImage").src = img;
+     // document.getElementById("modalImage").src = img;
      document.getElementById("storyModal").style.display = "flex";
 }
 
 function closeModal() {
      document.getElementById("storyModal").style.display = "none";
 }
+
+
+// FOR LOGIN AND REGISTRATION SECTION
+document.addEventListener("DOMContentLoaded", function () {
+     const splashscreenSection = document.querySelector(".splashscreen-section");
+     const containerSplash = document.querySelector(".container-splash");
+     const container = document.querySelector(".container");
+     const loginBox = document.querySelector(".login-box");
+     const registrationBox = document.querySelector(".registration-box");
+     const showLogin = document.getElementById("showLogin");
+     const showRegister = document.getElementById("showRegister");
+     const isSignInClicked = document.getElementById("btnSignIn");
+
+     // Function to clear all input fields
+     function clearFields(form) {
+          const inputs = form.querySelectorAll("input");
+          inputs.forEach(input => {
+               if (input.type !== "checkbox") {
+                    input.value = ""; // Clear text fields
+               } else {
+                    input.checked = false; // Uncheck checkboxes
+               }
+          });
+     }
+
+     if (showRegister) {
+          showRegister.addEventListener("click", function (event) {
+               event.preventDefault();
+               clearFields(loginBox);
+               loginBox.style.display = "none";
+               registrationBox.style.display = "block";
+          });
+     }
+
+     if (showLogin) {
+          showLogin.addEventListener("click", function (event) {
+               event.preventDefault();
+               clearFields(registrationBox);
+               loginBox.style.display = "block";
+               registrationBox.style.display = "none";
+          });
+     }
+
+     if (isSignInClicked) {
+          isSignInClicked.addEventListener("click", function () {
+               window.open("landing-page.html", "_self");
+          });
+     }
+
+     // 🎬 **Show Splash Screen and Smoothly Fade Out**
+     setTimeout(function () {
+          containerSplash.classList.add("hide"); // Start fade-out animation
+          
+          setTimeout(function () {
+               splashscreenSection.style.display = "none"; // Hide splash screen completely after animation
+               container.classList.add("show"); // Show login container after splash fades out
+               loginBox.classList.add("active"); // Show the login box
+          }, 1500); // Matches the fade-out duration in CSS
+     }, 3000); // Delay before exiting splash screen
+
+     // Handle both Show Password checkboxes separately
+     const loginPasswordField = document.getElementById("loginPassword");
+     const registerPasswordField = document.getElementById("registerPassword");
+
+     const toggleLoginPassword = document.getElementById("showLoginPassword");
+     const toggleRegisterPassword = document.getElementById("showRegisterPassword");
+
+     if (toggleLoginPassword && loginPasswordField) {
+          toggleLoginPassword.addEventListener("change", function () {
+               loginPasswordField.type = this.checked ? "text" : "password";
+          });
+     }
+
+     if (toggleRegisterPassword && registerPasswordField) {
+          toggleRegisterPassword.addEventListener("change", function () {
+               registerPasswordField.type = this.checked ? "text" : "password";
+          });
+     }
+});
+
+// HEADER RESPONSIVENESS
+document.addEventListener("DOMContentLoaded", function () {
+     const burgerMenu = document.getElementById("burgerMenu");
+     const navMenu = document.getElementById("navMenu");
+
+     burgerMenu.addEventListener("click", function () {
+          navMenu.classList.toggle("active");
+     });
+});
+
+
+
+
+
 
 
 
