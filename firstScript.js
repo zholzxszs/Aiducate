@@ -296,6 +296,13 @@ document.addEventListener("DOMContentLoaded", function () {
      });
 });
 
+// FOR BUTTON ALL BASICS
+let btnHivBasics = document.getElementById("btnHivBasics");
+
+btnHivBasics.addEventListener("click", function () {
+     window.open("education.html", "_self");
+})
+
 
 
 
