@@ -13,19 +13,27 @@
 <body>
      <header class="header">
           <div class="logo-and-name">
-               <img src="Resources/Icons/websiteIcon.png" alt="Aidhance Logo">
+               <img src="Resources/Icons/websiteIcon.png" alt="AIDUCATE Logo">
                <h2 class="logo">AIDUCATE</h2>
           </div>
 
-          <nav class="nav">
-               <div>
-                    <a href="index.html">HOME</a>
+          <!-- Burger Menu Icon -->
+          <div class="burger-menu" id="burgerMenu">
+               ☰
+          </div>
+
+          <nav class="nav" id="navMenu">
+               <div class="nav-links">
+                    <a href="landing-page.html">HOME</a>
                     <a href="education.html">EDUCATION</a>
                     <a href="stories.html">STORIES</a>
                     <a href="get-help.html">GET HELP</a>
                </div>
-               <div class="welcome-greetings">
-                    <h3>HELLO, JUDIEL LEGASPINA!</h3>
+               <div class="welcome-greetings" id="welcomeText">
+                    <h3>HELLO, JUDIEL LEGASPINA</h3>
+               </div>
+               <div class="profile-button" id="profileButton">
+                    <button>Profile</button>
                </div>
           </nav>
      </header>
@@ -102,7 +110,7 @@
      <div id="storyModal" class="modal">
           <div class="modal-content">
                <span class="close" onclick="closeModal()">&times;</span>
-               <img id="modalImage" src="" alt="Story Image">
+               <!-- <img id="modalImage" src="" alt="Story Image"> -->
                <div>
                     <h2 id="modalTitle"></h2>
                     <p id="modalText"></p>
@@ -120,38 +128,52 @@
                     <div class="footer-tagline">
                          <p>Spreading knowledge, breaking stigma, and supporting lives.</p>
                     </div>
+                    <div class="social-icons">
+                         <a href="https://facebook.com" target="_blank">
+                              <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook" width="30">
+                         </a>
+                         <a href="https://instagram.com" target="_blank">
+                              <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="30">
+                         </a>                          
+                         <a href="https://github.com" target="_blank">
+                              <img src="https://cdn-icons-png.flaticon.com/512/733/733609.png" alt="GitHub" width="30">
+                         </a>
+                         <a href="https://x.com" target="_blank">
+                              <img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png" alt="X (formerly Twitter)" width="30">
+                         </a>
+                    </div>
                </div>
                <div class="footer-links">
                     <div class="links about-us">
                          <h4>About Us</h4>
                          <ul>
-                         <li>About</li>
-                         <li>Our Mission</li>
-                         <li>Blog</li>
-                         <li>Success Stories</li>
+                              <li>About</li>
+                              <li>Our Mission</li>
+                              <li>Blog</li>
+                              <li>Success Stories</li>
                          </ul>
                     </div>
                     <div class="links support">
                          <h4>Support</h4>
                          <ul>
-                         <li>FAQ</li>
-                         <li>Get Involved</li>
-                         <li>Contact Us</li>
+                              <li>FAQ</li>
+                              <li>Get Involved</li>
+                              <li>Contact Us</li>
                          </ul>
                     </div>
                     <div class="links resources">  
                          <h4>Resources</h4>
                          <ul>
-                         <li>Prevention and Treatment</li>
-                         <li>Support Groups</li>
-                         <li>Community Guidelines</li>
+                              <li>Prevention and Treatment</li>
+                              <li>Support Groups</li>
+                              <li>Community Guidelines</li>
                          </ul>
                     </div>
                     <div class="links legal">
                          <h4>Legal</h4>
                          <ul>
-                         <li>Terms</li>
-                         <li>Privacy</li>
+                              <li>Terms</li>
+                              <li>Privacy</li>
                          </ul>
                     </div>
                </div>
@@ -160,6 +182,6 @@
           <div class="footer-second-row">
                <h6>© 2025 AIDUCATE. All rights reserved.</h6>
           </div>
-     </section>
+     </section>     
 </body>
 </html>
