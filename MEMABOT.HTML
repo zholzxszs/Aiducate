@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIV & AIDS Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .chatbox {
+            height: 400px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            background: #fafafa;
+        }
+        .input-area {
+            margin-top: 10px;
+        }
+        .input-area input {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .input-area button {
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .bot, .user {
+            text-align: left;
+            margin: 5px 0;
+        }
+        .bot {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://via.placeholder.com/600x200" alt="AI Chatbot" style="width:100%; max-width:600px; border-radius:10px;">
+    <div class="container">
+        <h2>HIV & AIDS Chatbot</h2>
+        <div class="chatbox" id="chatbox">
+            <p class="bot">Hello! I'm here to answer your questions about HIV and AIDS.</p>
+        </div>
+        <div class="input-area">
+            <input type="text" id="userInput" placeholder="Ask me anything...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    
+    <script>
+        function sendMessage() {
+            let userInput = document.getElementById("userInput").value;
+            if (!userInput.trim()) return;
+
+            let chatbox = document.getElementById("chatbox");
+            chatbox.innerHTML += `<p class='user'><strong>You:</strong> ${userInput}</p>`;
+            document.getElementById("userInput").value = "";
+            chatbox.scrollTop = chatbox.scrollHeight;
+
+            setTimeout(() => {
+                let botResponse = getBotResponse(userInput);
+                chatbox.innerHTML += `<p class='bot'><strong>Bot:</strong> ${botResponse}</p>`;
+                chatbox.scrollTop = chatbox.scrollHeight;
+            }, 1000);
+        }
+
+        function getBotResponse(input) {
+            let responses = {
+                "what is hiv?": "HIV (Human Immunodeficiency Virus) is a virus that attacks the body's immune system.",
+                "what is aids?": "AIDS (Acquired Immunodeficiency Syndrome) is the advanced stage of HIV infection.",
+                "how is hiv transmitted?": "HIV is transmitted through blood, semen, vaginal fluids, rectal fluids, and breast milk.",
+                "is there a cure for hiv?": "There is no cure for HIV, but treatment can help manage it and prevent AIDS."
+            };
+            
+            return responses[input.toLowerCase()] || "I'm sorry, I don't have an answer for that. Please ask something else about HIV or AIDS.";
+        }
+    </script>
+</body>
+</html>
