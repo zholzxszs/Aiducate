@@ -461,10 +461,11 @@ hr {
 }
 
 
+
 /* FOOTER SECTION */
 .footer-section {
      background-color: #1B3A4B;
-     color: #F8F9FA;
+     color: #f8f9fae5;
      padding: 50px 50px 20px 50px;
      display: flex;
      flex-direction: column;
@@ -536,10 +537,15 @@ hr {
      cursor: pointer;
 }
 
+.links li:hover {
+     color: #FFFFFF;
+     text-decoration: underline;
+}
+
 /* Social Media Icons */
 .social-icons {
      display: flex;
-     gap: 15px;
+     gap: 10px;
      margin-top: 10px;
 }
 
@@ -554,21 +560,30 @@ hr {
 }
 
 .social-icons img {
-     width: 30px;
-     height: 30px;
+     width: 25px;
+     height: 25px;
+     transition: opacity 0.3s ease-in-out;
+     opacity: 0.7;
+}
+
+#x-target {
      filter: invert(100%) brightness(2); /* Inverts and makes it whiter */
      transition: opacity 0.3s ease-in-out;
      opacity: 0.7;
 }
 
 .social-icons img:hover {
-     opacity: 0.85;
+     opacity: 1;
+}
+
+#x-target:hover {
+     opacity: 1;
 }
 
 /* Divider */
 .footer-section hr {
      border: none;
-     border-top: 1px solid #F8F9FA;
+     border-top: 1px solid #f8f9fae5;
      margin: 15px 0;
 }
 
