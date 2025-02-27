@@ -11,7 +11,8 @@ body {
      align-items: center;
      height: 100vh;
      margin: 0;
-     background: linear-gradient(45deg, #1b3a4b, #49616f, #1b3a4b, #49616f);
+     /* background: linear-gradient(45deg, #1b3a4b, #49616f, #1b3a4b, #49616f); */
+     background: #F8F9FA;
      background-size: 300% 300%;
      animation: rotateGradient 12s infinite linear;
 }
